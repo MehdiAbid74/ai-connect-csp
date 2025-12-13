@@ -1,0 +1,1201 @@
+id,size,puzzle,created_at
+test-3x3-001,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, blue, green.
+Pets: cat, turtle, dog.
+
+Clues:
+1. Mallory lives in the blue house.
+2. Alice lives in house 3.
+3. The orange house contains the turtle.
+4. House 1 is painted orange.
+5. Bob does not live in the blue house.
+6. Mallory does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-002,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, blue, orange.
+Pets: fish, bird, dog.
+
+Clues:
+1. The person in house 3 owns the bird.
+2. The red house is immediately to the left of the orange house.
+3. The blue house contains the dog.
+4. The person in house 2 owns the fish.
+5. Niaj does not live in the orange house.
+6. Bob does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-003,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, orange, green.
+Pets: cat, hamster, rabbit.
+
+Clues:
+1. Carol lives in house 1.
+2. The purple house is immediately to the left of the orange house.
+3. The green house contains the cat.
+4. Carol owns the hamster.
+5. Mallory does not live in the orange house.
+6. Carol does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-004,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, white, orange.
+Pets: cat, rabbit, turtle.
+
+Clues:
+1. Ivan lives in house 2.
+2. Ivan lives in the red house.
+3. Heidi lives in the orange house.
+4. House 3 is painted orange.
+5. Heidi does not live in the red house.
+6. Heidi does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-005,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, white, blue.
+Pets: turtle, cat, fish.
+
+Clues:
+1. Ivan lives in house 1.
+2. Mallory owns the turtle.
+3. Ivan owns the fish.
+4. Mallory lives in house 2.
+5. Mallory does not live in the blue house.
+6. Mallory does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-006,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, purple, white.
+Pets: dog, cat, rabbit.
+
+Clues:
+1. Grace lives in the yellow house.
+2. Grace lives in house 3.
+3. House 3 is painted yellow.
+4. Mallory lives in the white house.
+5. Mallory does not live in the yellow house.
+6. Mallory does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-007,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, yellow, blue.
+Pets: turtle, dog, cat.
+
+Clues:
+1. Bob lives in the yellow house.
+2. Heidi lives in the blue house.
+3. Alice owns the cat.
+4. Alice lives in the red house.
+5. Heidi does not live in the yellow house.
+6. Heidi does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-008,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, yellow, blue.
+Pets: hamster, rabbit, fish.
+
+Clues:
+1. Grace lives in house 2.
+2. Alice lives in the yellow house.
+3. Eve lives in house 3.
+4. The yellow house contains the fish.
+5. Eve does not live in the blue house.
+6. Grace does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-009,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, purple, white.
+Pets: fish, bird, rabbit.
+
+Clues:
+1. The white house is immediately to the left of the purple house.
+2. The white house contains the rabbit.
+3. Judy lives in house 3.
+4. Bob lives in house 2.
+5. Bob does not live in the white house.
+6. Judy does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-010,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, red, green.
+Pets: bird, dog, rabbit.
+
+Clues:
+1. Ivan lives in the orange house.
+2. The red house contains the rabbit.
+3. Mallory lives in the green house.
+4. The orange house contains the dog.
+5. Ivan does not live in the green house.
+6. Eve does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-011,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, red, blue.
+Pets: fish, turtle, cat.
+
+Clues:
+1. The person in house 3 owns the turtle.
+2. The blue house contains the cat.
+3. Carol owns the cat.
+4. The purple house contains the turtle.
+5. Niaj does not live in the red house.
+6. Carol does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-012,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, blue, orange.
+Pets: turtle, dog, bird.
+
+Clues:
+1. The person in house 3 owns the turtle.
+2. Niaj owns the bird.
+3. David lives in house 1.
+4. The person in house 1 owns the dog.
+5. Niaj does not live in the orange house.
+6. David does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-013,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, blue, purple.
+Pets: bird, rabbit, dog.
+
+Clues:
+1. Frank lives in the orange house.
+2. House 1 is painted orange.
+3. The orange house contains the bird.
+4. House 2 is painted blue.
+5. Grace does not live in the purple house.
+6. Bob does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-014,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, red, blue.
+Pets: fish, rabbit, turtle.
+
+Clues:
+1. The blue house contains the rabbit.
+2. The blue house is immediately to the left of the red house.
+3. The person in house 1 owns the rabbit.
+4. The red house is immediately to the left of the orange house.
+5. Carol does not live in the orange house.
+6. Ivan does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-015,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, purple, white.
+Pets: fish, bird, hamster.
+
+Clues:
+1. The purple house is immediately to the left of the white house.
+2. The orange house contains the hamster.
+3. Niaj owns the fish.
+4. Heidi lives in house 1.
+5. Niaj does not live in the orange house.
+6. Heidi does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-016,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, purple, yellow.
+Pets: hamster, dog, cat.
+
+Clues:
+1. The purple house contains the hamster.
+2. The blue house is immediately to the left of the yellow house.
+3. The purple house is immediately to the left of the blue house.
+4. Bob owns the hamster.
+5. Grace does not live in the blue house.
+6. Mallory does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-017,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, red, white.
+Pets: rabbit, hamster, cat.
+
+Clues:
+1. The white house contains the rabbit.
+2. House 3 is painted orange.
+3. Mallory lives in the white house.
+4. The red house contains the cat.
+5. Mallory does not live in the orange house.
+6. Grace does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-018,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, green, yellow.
+Pets: rabbit, bird, turtle.
+
+Clues:
+1. The yellow house contains the bird.
+2. House 2 is painted green.
+3. Carol owns the rabbit.
+4. The person in house 1 owns the bird.
+5. Carol does not live in the yellow house.
+6. Carol does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-019,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, yellow, green.
+Pets: hamster, cat, fish.
+
+Clues:
+1. The person in house 3 owns the cat.
+2. The yellow house is immediately to the left of the green house.
+3. The yellow house contains the fish.
+4. House 1 is painted orange.
+5. Bob does not live in the green house.
+6. Grace does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-020,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, purple, green.
+Pets: rabbit, hamster, turtle.
+
+Clues:
+1. The person in house 3 owns the rabbit.
+2. The green house is immediately to the left of the purple house.
+3. Grace lives in the green house.
+4. Bob owns the hamster.
+5. Grace does not live in the yellow house.
+6. Bob does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-021,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, blue, red.
+Pets: turtle, cat, bird.
+
+Clues:
+1. The blue house is immediately to the left of the purple house.
+2. The red house contains the cat.
+3. Eve owns the turtle.
+4. The person in house 3 owns the turtle.
+5. Judy does not live in the purple house.
+6. Eve does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-022,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, white, purple.
+Pets: bird, dog, cat.
+
+Clues:
+1. The person in house 2 owns the dog.
+2. The person in house 1 owns the bird.
+3. Judy lives in house 2.
+4. House 2 is painted green.
+5. Bob does not live in the green house.
+6. Judy does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-023,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, orange, white.
+Pets: rabbit, hamster, dog.
+
+Clues:
+1. Eve lives in house 2.
+2. David owns the hamster.
+3. The person in house 3 owns the hamster.
+4. The white house contains the dog.
+5. Alice does not live in the blue house.
+6. David does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-024,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, red, orange.
+Pets: cat, rabbit, fish.
+
+Clues:
+1. Frank owns the rabbit.
+2. House 3 is painted orange.
+3. Judy lives in house 3.
+4. Frank lives in house 1.
+5. Frank does not live in the orange house.
+6. Frank does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-025,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, blue, orange.
+Pets: bird, dog, hamster.
+
+Clues:
+1. House 1 is painted red.
+2. The blue house is immediately to the left of the orange house.
+3. Ivan lives in the blue house.
+4. Ivan owns the bird.
+5. Alice does not live in the orange house.
+6. Heidi does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-026,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, red, yellow.
+Pets: dog, rabbit, cat.
+
+Clues:
+1. The yellow house contains the rabbit.
+2. The green house contains the dog.
+3. House 3 is painted yellow.
+4. Ivan lives in house 1.
+5. Bob does not live in the yellow house.
+6. Ivan does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-027,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, purple, yellow.
+Pets: hamster, bird, cat.
+
+Clues:
+1. Niaj owns the cat.
+2. The purple house is immediately to the left of the yellow house.
+3. The person in house 2 owns the bird.
+4. House 3 is painted yellow.
+5. Ivan does not live in the white house.
+6. Frank does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-028,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, orange, yellow.
+Pets: rabbit, dog, bird.
+
+Clues:
+1. Frank lives in house 3.
+2. Heidi lives in the purple house.
+3. Frank owns the bird.
+4. Heidi owns the dog.
+5. Eve does not live in the orange house.
+6. Eve does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-029,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, orange, green.
+Pets: cat, turtle, dog.
+
+Clues:
+1. House 3 is painted green.
+2. The purple house contains the cat.
+3. Ivan lives in house 2.
+4. The orange house contains the dog.
+5. Ivan does not live in the orange house.
+6. Grace does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-030,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, yellow, purple.
+Pets: bird, fish, turtle.
+
+Clues:
+1. The person in house 3 owns the fish.
+2. The person in house 2 owns the bird.
+3. The yellow house is immediately to the left of the green house.
+4. The green house contains the fish.
+5. Bob does not live in the yellow house.
+6. Grace does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-031,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, white, purple.
+Pets: bird, fish, rabbit.
+
+Clues:
+1. Grace lives in the white house.
+2. Grace owns the fish.
+3. Niaj lives in the purple house.
+4. The white house contains the fish.
+5. Carol does not live in the purple house.
+6. Carol does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-032,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, green, yellow.
+Pets: dog, fish, rabbit.
+
+Clues:
+1. Mallory owns the fish.
+2. The person in house 3 owns the rabbit.
+3. The green house is immediately to the left of the orange house.
+4. The green house contains the dog.
+5. Mallory does not live in the green house.
+6. Frank does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-033,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, blue, red.
+Pets: rabbit, bird, fish.
+
+Clues:
+1. Heidi owns the rabbit.
+2. The person in house 2 owns the rabbit.
+3. The red house is immediately to the left of the blue house.
+4. House 3 is painted green.
+5. David does not live in the blue house.
+6. David does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-034,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, red, blue.
+Pets: turtle, cat, fish.
+
+Clues:
+1. The red house contains the fish.
+2. The red house is immediately to the left of the green house.
+3. Carol owns the fish.
+4. The blue house is immediately to the left of the red house.
+5. Bob does not live in the red house.
+6. Alice does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-035,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, blue, purple.
+Pets: cat, dog, turtle.
+
+Clues:
+1. The purple house contains the turtle.
+2. Niaj lives in house 1.
+3. Bob owns the turtle.
+4. Niaj owns the cat.
+5. Bob does not live in the blue house.
+6. Heidi does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-036,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, white, orange.
+Pets: bird, rabbit, dog.
+
+Clues:
+1. Ivan lives in house 3.
+2. Ivan lives in the orange house.
+3. The orange house contains the dog.
+4. House 3 is painted orange.
+5. Alice does not live in the orange house.
+6. Ivan does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-037,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, orange, yellow.
+Pets: dog, cat, turtle.
+
+Clues:
+1. Alice owns the cat.
+2. The person in house 2 owns the turtle.
+3. The purple house is immediately to the left of the yellow house.
+4. House 2 is painted yellow.
+5. Alice does not live in the yellow house.
+6. Carol does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-038,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, orange, purple.
+Pets: hamster, fish, bird.
+
+Clues:
+1. Grace lives in the purple house.
+2. The blue house contains the bird.
+3. Frank lives in house 3.
+4. Frank owns the hamster.
+5. Grace does not live in the blue house.
+6. Grace does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-039,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, orange, white.
+Pets: bird, dog, hamster.
+
+Clues:
+1. Judy lives in house 3.
+2. Judy owns the hamster.
+3. Grace owns the dog.
+4. The person in house 3 owns the hamster.
+5. Judy does not live in the white house.
+6. Grace does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-040,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, orange, yellow.
+Pets: hamster, fish, rabbit.
+
+Clues:
+1. Carol owns the fish.
+2. Mallory lives in the white house.
+3. Bob lives in house 3.
+4. The yellow house contains the hamster.
+5. Carol does not live in the yellow house.
+6. Carol does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-041,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, purple, yellow.
+Pets: fish, cat, dog.
+
+Clues:
+1. Judy lives in house 3.
+2. The yellow house is immediately to the left of the blue house.
+3. The blue house is immediately to the left of the purple house.
+4. David lives in the yellow house.
+5. Judy does not live in the blue house.
+6. David does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-042,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, purple, red.
+Pets: bird, fish, hamster.
+
+Clues:
+1. Grace lives in the green house.
+2. House 1 is painted purple.
+3. Grace lives in house 3.
+4. Frank owns the bird.
+5. Frank does not live in the green house.
+6. Grace does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-043,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, yellow, red.
+Pets: hamster, bird, cat.
+
+Clues:
+1. The orange house is immediately to the left of the yellow house.
+2. Niaj lives in house 1.
+3. Niaj lives in the orange house.
+4. The orange house contains the bird.
+5. Niaj does not live in the red house.
+6. Carol does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-044,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, purple, green.
+Pets: turtle, hamster, dog.
+
+Clues:
+1. Carol lives in house 2.
+2. The person in house 2 owns the turtle.
+3. Eve owns the dog.
+4. Bob lives in the purple house.
+5. Carol does not live in the green house.
+6. Eve does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-045,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, white, purple.
+Pets: rabbit, fish, turtle.
+
+Clues:
+1. Eve owns the turtle.
+2. Bob lives in house 2.
+3. The green house contains the rabbit.
+4. Alice lives in house 3.
+5. Alice does not live in the green house.
+6. Bob does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-046,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, white, orange.
+Pets: turtle, fish, rabbit.
+
+Clues:
+1. Frank lives in the purple house.
+2. Frank lives in house 2.
+3. House 3 is painted white.
+4. The orange house is immediately to the left of the purple house.
+5. Bob does not live in the white house.
+6. Bob does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-047,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, blue, green.
+Pets: dog, cat, turtle.
+
+Clues:
+1. The person in house 1 owns the dog.
+2. The person in house 3 owns the turtle.
+3. The blue house is immediately to the left of the green house.
+4. Bob owns the turtle.
+5. Bob does not live in the blue house.
+6. Carol does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-048,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, green, purple.
+Pets: bird, turtle, dog.
+
+Clues:
+1. House 1 is painted white.
+2. Grace owns the dog.
+3. The person in house 2 owns the dog.
+4. The person in house 1 owns the bird.
+5. Bob does not live in the white house.
+6. Judy does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-049,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, orange, blue.
+Pets: bird, hamster, fish.
+
+Clues:
+1. House 3 is painted blue.
+2. House 2 is painted orange.
+3. Bob lives in the orange house.
+4. The person in house 2 owns the fish.
+5. Alice does not live in the green house.
+6. Carol does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-050,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, orange, blue.
+Pets: rabbit, bird, dog.
+
+Clues:
+1. House 3 is painted orange.
+2. The red house is immediately to the left of the orange house.
+3. Niaj lives in the orange house.
+4. Carol owns the rabbit.
+5. Carol does not live in the blue house.
+6. Carol does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-051,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, white, purple.
+Pets: bird, cat, fish.
+
+Clues:
+1. Bob lives in house 3.
+2. Carol owns the bird.
+3. Frank lives in house 1.
+4. Carol lives in house 2.
+5. Carol does not live in the purple house.
+6. Bob does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-052,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, orange, purple.
+Pets: rabbit, fish, bird.
+
+Clues:
+1. Judy lives in the purple house.
+2. Carol owns the rabbit.
+3. House 1 is painted orange.
+4. The person in house 1 owns the bird.
+5. Judy does not live in the orange house.
+6. Niaj does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-053,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, orange, blue.
+Pets: rabbit, bird, hamster.
+
+Clues:
+1. The orange house contains the hamster.
+2. Judy lives in the blue house.
+3. Judy lives in house 3.
+4. The white house contains the rabbit.
+5. Carol does not live in the blue house.
+6. Carol does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-054,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, purple, white.
+Pets: cat, turtle, fish.
+
+Clues:
+1. House 2 is painted purple.
+2. The person in house 3 owns the turtle.
+3. Alice owns the turtle.
+4. House 1 is painted white.
+5. Bob does not live in the purple house.
+6. Bob does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-055,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, white, purple.
+Pets: bird, cat, rabbit.
+
+Clues:
+1. Carol lives in house 1.
+2. House 1 is painted white.
+3. Bob lives in house 2.
+4. Grace lives in house 3.
+5. Bob does not live in the purple house.
+6. Bob does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-056,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, orange, red.
+Pets: fish, hamster, bird.
+
+Clues:
+1. House 3 is painted red.
+2. The person in house 1 owns the fish.
+3. The orange house is immediately to the left of the white house.
+4. The person in house 2 owns the hamster.
+5. Grace does not live in the red house.
+6. Grace does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-057,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, yellow, blue.
+Pets: cat, hamster, fish.
+
+Clues:
+1. Heidi owns the hamster.
+2. House 1 is painted purple.
+3. Ivan lives in house 1.
+4. The blue house contains the fish.
+5. Ivan does not live in the yellow house.
+6. Frank does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-058,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, orange, blue.
+Pets: rabbit, hamster, cat.
+
+Clues:
+1. House 3 is painted blue.
+2. Frank owns the hamster.
+3. Eve owns the rabbit.
+4. Bob lives in the orange house.
+5. Eve does not live in the orange house.
+6. Frank does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-059,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, white, red.
+Pets: turtle, dog, fish.
+
+Clues:
+1. The person in house 1 owns the dog.
+2. Eve owns the fish.
+3. The person in house 3 owns the turtle.
+4. David lives in the red house.
+5. Mallory does not live in the white house.
+6. David does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-060,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, green, red.
+Pets: rabbit, bird, turtle.
+
+Clues:
+1. House 1 is painted red.
+2. The green house contains the turtle.
+3. The person in house 2 owns the turtle.
+4. Niaj owns the turtle.
+5. Heidi does not live in the green house.
+6. Niaj does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-061,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, blue, red.
+Pets: rabbit, bird, turtle.
+
+Clues:
+1. The red house is immediately to the left of the orange house.
+2. The orange house contains the bird.
+3. The person in house 1 owns the turtle.
+4. The blue house is immediately to the left of the red house.
+5. Ivan does not live in the red house.
+6. Grace does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-062,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, green, purple.
+Pets: hamster, dog, fish.
+
+Clues:
+1. The purple house contains the hamster.
+2. The person in house 2 owns the dog.
+3. Heidi lives in house 3.
+4. Heidi owns the fish.
+5. Heidi does not live in the orange house.
+6. Ivan does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-063,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, yellow, orange.
+Pets: turtle, hamster, rabbit.
+
+Clues:
+1. The yellow house contains the rabbit.
+2. The person in house 1 owns the hamster.
+3. The blue house contains the hamster.
+4. Grace lives in the yellow house.
+5. Mallory does not live in the yellow house.
+6. Mallory does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-064,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, red, orange.
+Pets: fish, dog, hamster.
+
+Clues:
+1. Alice lives in house 1.
+2. The red house is immediately to the left of the orange house.
+3. The orange house is immediately to the left of the green house.
+4. The person in house 3 owns the dog.
+5. David does not live in the orange house.
+6. Alice does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-065,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, yellow, red.
+Pets: bird, rabbit, hamster.
+
+Clues:
+1. Niaj owns the bird.
+2. The person in house 2 owns the bird.
+3. The yellow house is immediately to the left of the red house.
+4. House 1 is painted purple.
+5. Niaj does not live in the red house.
+6. Niaj does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-066,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, orange, green.
+Pets: dog, bird, hamster.
+
+Clues:
+1. The green house is immediately to the left of the purple house.
+2. The person in house 2 owns the dog.
+3. The purple house contains the hamster.
+4. The orange house contains the bird.
+5. Bob does not live in the green house.
+6. Bob does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-067,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, blue, orange.
+Pets: hamster, dog, fish.
+
+Clues:
+1. The person in house 1 owns the hamster.
+2. House 1 is painted orange.
+3. Heidi lives in house 1.
+4. Bob owns the fish.
+5. Heidi does not live in the green house.
+6. Frank does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-068,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, orange, red.
+Pets: turtle, dog, hamster.
+
+Clues:
+1. Alice lives in the orange house.
+2. The red house is immediately to the left of the white house.
+3. Bob lives in the red house.
+4. The orange house contains the dog.
+5. Ivan does not live in the red house.
+6. Ivan does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-069,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, blue, yellow.
+Pets: hamster, fish, cat.
+
+Clues:
+1. Frank lives in the red house.
+2. Eve lives in the yellow house.
+3. The person in house 2 owns the hamster.
+4. Grace owns the cat.
+5. Eve does not live in the blue house.
+6. Grace does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-070,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, white, red.
+Pets: cat, bird, dog.
+
+Clues:
+1. Eve lives in the white house.
+2. House 3 is painted red.
+3. Mallory owns the dog.
+4. The person in house 3 owns the cat.
+5. Mallory does not live in the white house.
+6. Bob does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-071,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, yellow, red.
+Pets: turtle, fish, bird.
+
+Clues:
+1. Judy lives in house 2.
+2. The orange house contains the turtle.
+3. Grace owns the turtle.
+4. Judy lives in the yellow house.
+5. Grace does not live in the yellow house.
+6. Judy does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-072,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, white, red.
+Pets: rabbit, fish, cat.
+
+Clues:
+1. The yellow house is immediately to the left of the white house.
+2. Alice lives in house 1.
+3. The yellow house contains the fish.
+4. Alice lives in the yellow house.
+5. Alice does not live in the red house.
+6. Alice does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-073,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, blue, orange.
+Pets: fish, rabbit, cat.
+
+Clues:
+1. Judy lives in the blue house.
+2. The blue house contains the cat.
+3. The green house contains the rabbit.
+4. The person in house 2 owns the cat.
+5. Grace does not live in the blue house.
+6. Judy does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-074,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, blue, green.
+Pets: bird, rabbit, cat.
+
+Clues:
+1. Mallory lives in the green house.
+2. Carol lives in the blue house.
+3. Mallory owns the bird.
+4. The orange house contains the cat.
+5. Carol does not live in the green house.
+6. Carol does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-075,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, white, blue.
+Pets: cat, fish, rabbit.
+
+Clues:
+1. Bob lives in the white house.
+2. Bob lives in house 3.
+3. The person in house 3 owns the fish.
+4. Frank lives in the blue house.
+5. Grace does not live in the white house.
+6. Frank does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-076,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, orange, white.
+Pets: dog, bird, turtle.
+
+Clues:
+1. House 2 is painted red.
+2. Frank lives in the red house.
+3. Eve lives in the white house.
+4. House 1 is painted orange.
+5. Eve does not live in the red house.
+6. Bob does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-077,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, purple, green.
+Pets: bird, turtle, cat.
+
+Clues:
+1. Bob lives in the purple house.
+2. Bob owns the cat.
+3. The person in house 3 owns the cat.
+4. Eve lives in house 2.
+5. Bob does not live in the green house.
+6. Judy does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-078,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, white, green.
+Pets: fish, cat, hamster.
+
+Clues:
+1. House 1 is painted green.
+2. The person in house 1 owns the hamster.
+3. The green house is immediately to the left of the white house.
+4. Heidi owns the cat.
+5. Ivan does not live in the orange house.
+6. Carol does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-079,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, yellow, purple.
+Pets: fish, dog, turtle.
+
+Clues:
+1. House 1 is painted orange.
+2. The orange house is immediately to the left of the yellow house.
+3. The person in house 2 owns the fish.
+4. The orange house contains the dog.
+5. Judy does not live in the purple house.
+6. Judy does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-080,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, green, orange.
+Pets: turtle, dog, fish.
+
+Clues:
+1. Niaj owns the fish.
+2. Judy lives in the orange house.
+3. The white house is immediately to the left of the orange house.
+4. The green house contains the turtle.
+5. Judy does not live in the white house.
+6. Niaj does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-081,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, red, orange.
+Pets: hamster, fish, bird.
+
+Clues:
+1. Niaj owns the fish.
+2. Mallory lives in house 1.
+3. The red house contains the fish.
+4. Niaj lives in the red house.
+5. Mallory does not live in the red house.
+6. Grace does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-082,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, blue, red.
+Pets: rabbit, bird, turtle.
+
+Clues:
+1. Eve owns the turtle.
+2. The person in house 2 owns the bird.
+3. The green house contains the bird.
+4. The blue house contains the turtle.
+5. David does not live in the blue house.
+6. David does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-083,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, green, orange.
+Pets: dog, fish, rabbit.
+
+Clues:
+1. The orange house is immediately to the left of the green house.
+2. Eve lives in house 1.
+3. Eve lives in the yellow house.
+4. House 2 is painted orange.
+5. Eve does not live in the orange house.
+6. Frank does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-084,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, white, orange.
+Pets: cat, rabbit, hamster.
+
+Clues:
+1. House 1 is painted orange.
+2. The person in house 2 owns the cat.
+3. The white house is immediately to the left of the purple house.
+4. David owns the hamster.
+5. Mallory does not live in the purple house.
+6. David does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-085,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, purple, white.
+Pets: fish, cat, bird.
+
+Clues:
+1. The orange house contains the fish.
+2. The person in house 2 owns the cat.
+3. House 2 is painted white.
+4. The person in house 3 owns the fish.
+5. Bob does not live in the orange house.
+6. Bob does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-086,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: purple, orange, blue.
+Pets: cat, bird, turtle.
+
+Clues:
+1. The blue house contains the cat.
+2. Frank lives in house 2.
+3. The purple house is immediately to the left of the blue house.
+4. The person in house 3 owns the cat.
+5. Heidi does not live in the blue house.
+6. Ivan does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-087,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, yellow, blue.
+Pets: hamster, cat, rabbit.
+
+Clues:
+1. The blue house contains the rabbit.
+2. House 2 is painted yellow.
+3. House 1 is painted blue.
+4. David owns the rabbit.
+5. Alice does not live in the yellow house.
+6. David does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-088,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: orange, purple, green.
+Pets: hamster, bird, fish.
+
+Clues:
+1. The person in house 3 owns the hamster.
+2. The person in house 1 owns the bird.
+3. The orange house is immediately to the left of the green house.
+4. Judy owns the hamster.
+5. Judy does not live in the purple house.
+6. Eve does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-089,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, orange, yellow.
+Pets: dog, fish, rabbit.
+
+Clues:
+1. Bob lives in house 2.
+2. The person in house 3 owns the dog.
+3. The orange house contains the rabbit.
+4. House 3 is painted yellow.
+5. Bob does not live in the orange house.
+6. Bob does not live in the orange house.",2025-12-08T00:00:00Z
+test-3x3-090,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, orange, purple.
+Pets: dog, cat, bird.
+
+Clues:
+1. Bob lives in the purple house.
+2. The person in house 1 owns the dog.
+3. The purple house contains the cat.
+4. Carol owns the dog.
+5. Eve does not live in the purple house.
+6. Bob does not live in the white house.",2025-12-08T00:00:00Z
+test-3x3-091,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, red, orange.
+Pets: dog, cat, hamster.
+
+Clues:
+1. Niaj owns the hamster.
+2. Eve lives in the white house.
+3. The person in house 3 owns the dog.
+4. The white house is immediately to the left of the red house.
+5. Eve does not live in the red house.
+6. Niaj does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-092,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: yellow, green, white.
+Pets: cat, rabbit, fish.
+
+Clues:
+1. House 1 is painted yellow.
+2. Eve lives in house 2.
+3. The white house is immediately to the left of the green house.
+4. House 3 is painted green.
+5. Alice does not live in the white house.
+6. Alice does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-093,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, green, purple.
+Pets: turtle, hamster, bird.
+
+Clues:
+1. Alice lives in the green house.
+2. Ivan lives in the purple house.
+3. The purple house contains the turtle.
+4. Alice owns the hamster.
+5. Alice does not live in the white house.
+6. Eve does not live in the green house.",2025-12-08T00:00:00Z
+test-3x3-094,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, white, green.
+Pets: fish, rabbit, cat.
+
+Clues:
+1. House 1 is painted green.
+2. The white house is immediately to the left of the red house.
+3. Niaj lives in house 1.
+4. Frank owns the cat.
+5. Frank does not live in the green house.
+6. Carol does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-095,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: white, purple, red.
+Pets: cat, fish, bird.
+
+Clues:
+1. Judy lives in the purple house.
+2. Niaj lives in house 2.
+3. Judy owns the bird.
+4. The person in house 2 owns the cat.
+5. Grace does not live in the purple house.
+6. Niaj does not live in the red house.",2025-12-08T00:00:00Z
+test-3x3-096,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, purple, yellow.
+Pets: dog, hamster, fish.
+
+Clues:
+1. House 2 is painted purple.
+2. The yellow house is immediately to the left of the purple house.
+3. The purple house contains the fish.
+4. Niaj lives in the blue house.
+5. Heidi does not live in the blue house.
+6. Grace does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-097,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, yellow, purple.
+Pets: rabbit, turtle, fish.
+
+Clues:
+1. House 3 is painted yellow.
+2. The person in house 2 owns the fish.
+3. The person in house 1 owns the turtle.
+4. David lives in the green house.
+5. Bob does not live in the yellow house.
+6. Bob does not live in the yellow house.",2025-12-08T00:00:00Z
+test-3x3-098,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: red, orange, purple.
+Pets: hamster, cat, bird.
+
+Clues:
+1. Niaj owns the hamster.
+2. House 3 is painted red.
+3. Niaj lives in house 3.
+4. Niaj lives in the red house.
+5. Niaj does not live in the purple house.
+6. Niaj does not live in the purple house.",2025-12-08T00:00:00Z
+test-3x3-099,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: blue, red, yellow.
+Pets: turtle, rabbit, dog.
+
+Clues:
+1. The person in house 2 owns the dog.
+2. The person in house 3 owns the turtle.
+3. Judy lives in the red house.
+4. The red house contains the dog.
+5. Heidi does not live in the red house.
+6. David does not live in the blue house.",2025-12-08T00:00:00Z
+test-3x3-100,3*3,"Three friends live in three houses in a row, numbered 1 to 3. Each house is painted a different color and each friend owns a different pet.
+
+Colors: green, purple, orange.
+Pets: fish, dog, rabbit.
+
+Clues:
+1. Grace lives in the green house.
+2. The person in house 3 owns the dog.
+3. House 2 is painted orange.
+4. The person in house 2 owns the rabbit.
+5. Grace does not live in the purple house.
+6. Bob does not live in the purple house.",2025-12-08T00:00:00Z

@@ -1,8 +1,44 @@
 import re
+import csv
 from typing import Dict, List, Tuple, Optional, Any
 from constraint import Problem, AllDifferentConstraint
 
-# we still need to read CSV here
+def read_puzzle_from_csv(csv_file: str) -> List[Dict[str, Any]]:
+    """Reads all puzzle data from CSV with columns: id, puzzle, question, choices, solution_template, answer, created_at"""
+    
+    puzzles = []
+    with open(csv_file, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            puzzle_text = row.get('puzzle', '')
+            question = row.get('question', None)
+            choices_str = row.get('choices', '[]')
+            solution_template = row.get('solution_template', None)
+            puzzle_id = row.get('id', 'unknown')
+            
+            # Parse choices - handle format like "['Eric','Bob','Alice',...]"
+            choices = []
+            if choices_str and choices_str.strip():
+                # Remove brackets and quotes, split by comma
+                choices_str = choices_str.strip("[]'\"")
+                choices = [c.strip().strip("'\"") for c in choices_str.split(',')]
+                choices = [c for c in choices if c]  # remove empty strings
+            
+            # Parse solution_template if provided
+            template = None
+            if solution_template and solution_template.strip():
+                template = solution_template.strip()
+            
+            puzzles.append({
+                'puzzle_text': puzzle_text,
+                'question': question if question and question.strip() else None,
+                'choices': choices if choices else None,
+                'solution_template': template,
+                'puzzle_id': puzzle_id,
+                'puzzle_type': 'grid' if template else ('mc' if question else 'unknown')
+            })
+    
+    return puzzles
 
 # Puzzle text
 PUZZLE_TEXT = '''
@@ -35,7 +71,7 @@ There are 6 houses, numbered 1 to 6 from left to right, as seen from across the 
 GRID_SIZE = None  # e.g. (5, 7) for 5 houses and 7 attributes
 
 # Question (only for multiple choice)
-QUESTION = "What is Name of the person who lives in House 5?" #None
+QUESTION = "What is Name of the person who lives in House 5?"
 
 # Answer choices (only for multiple choice)
 CHOICES = [
@@ -45,7 +81,7 @@ CHOICES = [
 "Peter",
 "Carol",
 "Arnold"
-] #None
+]
 
 # Solution template (only for grid puzzles)
 SOLUTION_TEMPLATE = None
@@ -66,13 +102,13 @@ def isGridPuzzle() -> bool:
         return True
 
 def compute_grid_size(num_houses: int, attributes: Dict[str, List[str]]) -> Tuple[int, int]:
-    """computes grid size from puzzle data"""
+    # finds out grid size from puzzle data
     x = num_houses
     y = len(attributes)
     return (x, y)
 
 def parse_puzzle_header(text: str) -> Dict[str, Any]:
-    """parses puzzle header and extracts attributes and values"""
+    # parses puzzle header and extracts attributes and values
     result = {
         'num_houses': 0,
         'attributes': {}
@@ -122,7 +158,7 @@ def parse_puzzle_header(text: str) -> Dict[str, Any]:
     return result
 
 def parse_clues(text: str) -> List[str]:
-    """extracts all clues from the text"""
+    # extracts all clues from the text
     clues = []
     
     # search for "## Clues:" and extract numbered list
@@ -137,7 +173,7 @@ def parse_clues(text: str) -> List[str]:
     return clues
 
 def extract_entity(text: str, attributes: Dict[str, List[str]]) -> Tuple[Optional[str], Optional[str]]:
-    """extracts an entity (attribute value) from text"""
+    # extracts an entity (attribute value) from text
     text_lower = text.lower()
     
     for attr_name, values in attributes.items():
@@ -149,7 +185,7 @@ def extract_entity(text: str, attributes: Dict[str, List[str]]) -> Tuple[Optiona
     return (None, None)
 
 def extract_two_entities(clue: str, attributes: Dict[str, List[str]]) -> Tuple[Optional[Tuple], Optional[Tuple]]:
-    """extracts two entities from a clue"""
+    # extracts two entities from a clue
     found_entities = []
     clue_lower = clue.lower()
     
@@ -279,7 +315,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
 # csp solver
 
 def solve_grid_puzzle(puzzle_data: Dict[str, Any]) -> Dict[str, Any]:
-    """solves a grid puzzle using csp solver"""
+    # solves a grid puzzle using csp solver
     num_houses = puzzle_data['num_houses']
     attributes = puzzle_data['attributes']
     clues = puzzle_data['clues']
@@ -455,7 +491,7 @@ def add_constraint_from_clue(problem: Problem, clue_info: Dict, attributes: Dict
         problem.addConstraint(lambda x: x != 1, [var1])
 
 def format_grid_solution(solution: Dict, attributes: Dict, num_houses: int) -> Dict:
-    """formats the solution as a grid"""
+    # formats the solution as a grid
     # create header
     header = ["House"] + list(attributes.keys())
     
@@ -477,7 +513,7 @@ def format_grid_solution(solution: Dict, attributes: Dict, num_houses: int) -> D
     return {"header": header, "rows": rows}
 
 def extract_answer_from_solution(solution: Dict, question: str, choices: List[str], attributes: Dict) -> str:
-    """extracts the answer to the question from the solution"""
+    # extracts the answer to the question from the solution
     # example: "what is name of the person who lives in house 5?"
     house_match = re.search(r'House (\d+)', question)
     
@@ -559,8 +595,42 @@ def solve_puzzle():
 # execution
 
 if __name__ == "__main__":
-    # check if data is set
-    if PUZZLE_TEXT is None:
-        print("please set PUZZLE_TEXT and other variables at the top of the script!")
+    # optionally read from CSV file
+    # example: python parser.py mc.csv (for multiple choice)
+    # example: python parser.py grid.csv (for grid mode)
+    import sys
+    if len(sys.argv) > 1:
+        csv_file = sys.argv[1]
+        try:
+            csv_puzzles = read_puzzle_from_csv(csv_file)
+            print(f"loaded {len(csv_puzzles)} puzzle(s) from {csv_file}\n")
+            
+            # solve each puzzle
+            for puzzle_data in csv_puzzles:
+                PUZZLE_TEXT = puzzle_data['puzzle_text']
+                QUESTION = puzzle_data['question']
+                CHOICES = puzzle_data['choices']
+                SOLUTION_TEMPLATE = puzzle_data['solution_template']
+                puzzle_type = puzzle_data['puzzle_type']
+                
+                print(f"\n{'='*60}")
+                print(f"puzzle: {puzzle_data['puzzle_id']} ({puzzle_type} mode)")
+                print(f"{'='*60}")
+                
+                try:
+                    solve_puzzle()
+                except Exception as e:
+                    print(f"error solving puzzle {puzzle_data['puzzle_id']}: {e}")
+                    import traceback
+                    traceback.print_exc()
+                
+        except Exception as e:
+            print(f"error reading CSV file: {e}")
+            import traceback
+            traceback.print_exc()
     else:
-        solve_puzzle()
+        # use hardcoded PUZZLE_TEXT
+        if PUZZLE_TEXT is None:
+            print("please set PUZZLE_TEXT and other variables at the top of the script!")
+        else:
+            solve_puzzle()
