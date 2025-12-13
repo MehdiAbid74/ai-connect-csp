@@ -1,13 +1,14 @@
 AI Connect CSP
 
-## python contraint wont install 😭
-Solution:
 ```bash
 pip install python-constraint
 ```
 (not just constraint)
 
-#### Now you can run your script
+#### Run your script
 ```bash
-python parser.py
+python parser.py puzzleFile.csv
 ```
+
+we need to make a script that runs all of this automatically
+and also we need to implement functionality for the 100puzzles test file needed for our submission
