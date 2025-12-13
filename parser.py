@@ -2,11 +2,9 @@ import re
 from typing import Dict, List, Tuple, Optional, Any
 from constraint import Problem, AllDifferentConstraint
 
-# =============================================================================
-# CONFIGURATION - Enter input data here
-# =============================================================================
+# we still need to read CSV here
 
-# Puzzle text (complete)
+# Puzzle text
 PUZZLE_TEXT = '''
 There are 6 houses, numbered 1 to 6 from left to right, as seen from across the street. Each house is occupied by a different person. Each house has a unique attribute for each of the following characteristics:
 - Each person has a unique name: `Arnold`, `Peter`, `Eric`, `Alice`, `Bob`, `Carol`
@@ -32,7 +30,6 @@ There are 6 houses, numbered 1 to 6 from left to right, as seen from across the 
 15. The person who owns a Chevrolet Silverado is not in the first house.
 16. The person who loves science fiction books is directly left of the person who loves swimming.
 '''
-#None
 
 # Grid size (only for grid puzzles, otherwise None)
 GRID_SIZE = None  # e.g. (5, 7) for 5 houses and 7 attributes
@@ -53,14 +50,11 @@ CHOICES = [
 # Solution template (only for grid puzzles)
 SOLUTION_TEMPLATE = None
 
-# =============================================================================
 # utility functions
-# =============================================================================
 
 def isGridPuzzle() -> bool:
-    """determines if grid puzzle or multiple choice"""
-    # grid puzzle has solution_template
-    # multiple choice has question and choices
+    # determines if grid puzzle or multiple choice
+    # grid puzzle has solution_template, multiple choice has questions and choices
     if SOLUTION_TEMPLATE is not None:
         return True
     elif QUESTION is not None and CHOICES is not None:
@@ -71,13 +65,11 @@ def isGridPuzzle() -> bool:
             return False
         return True
 
-
 def compute_grid_size(num_houses: int, attributes: Dict[str, List[str]]) -> Tuple[int, int]:
     """computes grid size from puzzle data"""
     x = num_houses
     y = len(attributes)
     return (x, y)
-
 
 def parse_puzzle_header(text: str) -> Dict[str, Any]:
     """parses puzzle header and extracts attributes and values"""
@@ -129,7 +121,6 @@ def parse_puzzle_header(text: str) -> Dict[str, Any]:
     
     return result
 
-
 def parse_clues(text: str) -> List[str]:
     """extracts all clues from the text"""
     clues = []
@@ -145,7 +136,6 @@ def parse_clues(text: str) -> List[str]:
     
     return clues
 
-
 def extract_entity(text: str, attributes: Dict[str, List[str]]) -> Tuple[Optional[str], Optional[str]]:
     """extracts an entity (attribute value) from text"""
     text_lower = text.lower()
@@ -157,7 +147,6 @@ def extract_entity(text: str, attributes: Dict[str, List[str]]) -> Tuple[Optiona
                 return (attr_name, value)
     
     return (None, None)
-
 
 def extract_two_entities(clue: str, attributes: Dict[str, List[str]]) -> Tuple[Optional[Tuple], Optional[Tuple]]:
     """extracts two entities from a clue"""
@@ -198,14 +187,13 @@ def extract_two_entities(clue: str, attributes: Dict[str, List[str]]) -> Tuple[O
     
     return (None, None)
 
-
 def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_houses: int) -> Dict[str, Any]:
-    """parses a single clue and returns constraint information"""
+    # parses a single clue and returns constraint information
     clue_lower = clue.lower()
     
-    # check constraint types in order of specificity (most specific first)
+    # check constraint types in order (most specific first)
     
-    # "not in the first house" (must check before "in the first house")
+    # "not in the first house" (important: check before "in the first house")
     if 'not in the first house' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -223,7 +211,6 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # "directly left of" (must check before "left of")
     if 'directly left of' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -232,7 +219,6 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # "next to each other"
     if 'next to each other' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -241,7 +227,6 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # "one house between"
     if 'one house between' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -250,7 +235,6 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # "two houses between"
     if 'two houses between' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -259,7 +243,6 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # "somewhere to the left"
     if 'somewhere to the left' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -268,7 +251,6 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # "somewhere to the right"
     if 'somewhere to the right' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -294,10 +276,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
         'entities': entities
     }
 
-
-# =============================================================================
 # csp solver
-# =============================================================================
 
 def solve_grid_puzzle(puzzle_data: Dict[str, Any]) -> Dict[str, Any]:
     """solves a grid puzzle using csp solver"""
@@ -332,9 +311,8 @@ def solve_grid_puzzle(puzzle_data: Dict[str, Any]) -> Dict[str, Any]:
     else:
         return {"error": "no solution found"}
 
-
 def solve_multiple_choice(puzzle_data: Dict[str, Any]) -> str:
-    """solves a multiple choice puzzle using csp solver"""
+    # solves CSP multiple choice puzzle
     num_houses = puzzle_data['num_houses']
     attributes = puzzle_data['attributes']
     clues = puzzle_data['clues']
@@ -355,7 +333,7 @@ def solve_multiple_choice(puzzle_data: Dict[str, Any]) -> str:
         vars_for_attr = [f"{attr_name}_{value}" for value in values]
         problem.addConstraint(AllDifferentConstraint(), vars_for_attr)
     
-    # add constraints from clues
+    # try to add all constraints from clues
     print(f"adding {len(clues)} constraints...")
     constraints_added = 0
     for clue_info in clues:
@@ -378,7 +356,7 @@ def solve_multiple_choice(puzzle_data: Dict[str, Any]) -> str:
     if solutions:
         solution = solutions[0]
         
-        # debug: print the full solution
+        # print the full solution
         print("\nfull solution:")
         grid = format_grid_solution(solution, attributes, num_houses)
         if 'header' in grid:
@@ -392,14 +370,13 @@ def solve_multiple_choice(puzzle_data: Dict[str, Any]) -> str:
     else:
         return "no solution found"
 
-
 def add_constraint_from_clue(problem: Problem, clue_info: Dict, attributes: Dict):
-    """adds constraints to the csp problem based on clue type"""
+    # adds constraints to the csp problem (depends on clue type)
     clue_type = clue_info['type']
     entities = clue_info['entities']
     clue_lower = clue_info['clue'].lower()
     
-    # for first_house and not_first_house, we only need one entity
+    # for first_house and not_first_house
     if clue_type in ['first_house', 'not_first_house']:
         if entities[0] is None:
             return
@@ -416,13 +393,13 @@ def add_constraint_from_clue(problem: Problem, clue_info: Dict, attributes: Dict
         var1 = f"{attr1}_{val1}"
         var2 = f"{attr2}_{val2}"
         
-        # for directional constraints, determine correct order
-        # by checking which entity appears first in the clue text
+        # for directional constraints, find correct order
+        # (check which entity appears first in the clue text)
         if clue_type in ['directly_left', 'left_of', 'right_of']:
             pos1 = clue_lower.find(val1.lower())
             pos2 = clue_lower.find(val2.lower())
             
-            # if entity2 appears before entity1, swap them
+            # swap if entity2 appears first
             if pos2 < pos1:
                 var1, var2 = var2, var1
     
@@ -477,7 +454,6 @@ def add_constraint_from_clue(problem: Problem, clue_info: Dict, attributes: Dict
         # example: "the person who owns a chevrolet silverado is not in the first house"
         problem.addConstraint(lambda x: x != 1, [var1])
 
-
 def format_grid_solution(solution: Dict, attributes: Dict, num_houses: int) -> Dict:
     """formats the solution as a grid"""
     # create header
@@ -499,7 +475,6 @@ def format_grid_solution(solution: Dict, attributes: Dict, num_houses: int) -> D
         rows.append(row)
     
     return {"header": header, "rows": rows}
-
 
 def extract_answer_from_solution(solution: Dict, question: str, choices: List[str], attributes: Dict) -> str:
     """extracts the answer to the question from the solution"""
@@ -532,13 +507,10 @@ def extract_answer_from_solution(solution: Dict, question: str, choices: List[st
     
     return "unknown"
 
-
-# =============================================================================
 # main solver
-# =============================================================================
 
 def solve_puzzle():
-    """main function: determines puzzle type and solves it accordingly"""
+    # main function: decides which puzzle type and solves it
     if PUZZLE_TEXT is None:
         print("error: PUZZLE_TEXT is not set!")
         return
@@ -584,10 +556,7 @@ def solve_puzzle():
         result = solve_multiple_choice(puzzle_data)
         print(f"\nanswer: {result}")
 
-
-# =============================================================================
 # execution
-# =============================================================================
 
 if __name__ == "__main__":
     # check if data is set
