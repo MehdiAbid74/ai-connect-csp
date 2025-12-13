@@ -1,0 +1,243 @@
+{
+  "puzzle_000": {
+    "Bob": {
+      "nationality": "german",
+      "book_genre": "mystery",
+      "lunch": "grilled cheese",
+      "color": "yellow",
+      "animal": "dog",
+      "house": 1
+    },
+    "Eric": {
+      "nationality": "norwegian",
+      "book_genre": "fantasy",
+      "lunch": "stew",
+      "color": "blue",
+      "animal": "fish",
+      "house": 2
+    },
+    "Peter": {
+      "nationality": "dane",
+      "book_genre": "science fiction",
+      "lunch": "spaghetti",
+      "color": "green",
+      "animal": "cat",
+      "house": 3
+    },
+    "Arnold": {
+      "nationality": "swede",
+      "book_genre": "biography",
+      "lunch": "stir fry",
+      "color": "red",
+      "animal": "bird",
+      "house": 4
+    },
+    "Alice": {
+      "nationality": "brit",
+      "book_genre": "romance",
+      "lunch": "pizza",
+      "color": "white",
+      "animal": "horse",
+      "house": 5
+    }
+  },
+  "puzzle_001": {
+    "Eric": {
+      "occupation": "teacher",
+      "book_genre": "science fiction",
+      "phone": "iphone 13",
+      "house": 1
+    },
+    "Arnold": {
+      "occupation": "engineer",
+      "book_genre": "romance",
+      "phone": "oneplus 9",
+      "house": 2
+    },
+    "Alice": {
+      "occupation": "artist",
+      "book_genre": "fantasy",
+      "phone": "samsung galaxy s21",
+      "house": 3
+    },
+    "Peter": {
+      "occupation": "doctor",
+      "book_genre": "mystery",
+      "phone": "google pixel 6",
+      "house": 4
+    }
+  },
+  "puzzle_002": {
+    "error": "No solution found"
+  },
+  "puzzle_003": {
+    "Sarah": {
+      "children": "Bella",
+      "city": "city",
+      "book_genre": "historical fiction",
+      "house": 1
+    },
+    "Janelle": {
+      "children": "Alice",
+      "city": "camping",
+      "book_genre": "fantasy",
+      "house": 2
+    },
+    "Holly": {
+      "children": "Fred",
+      "city": "mountain",
+      "book_genre": "mystery",
+      "house": 3
+    },
+    "Kailyn": {
+      "children": "Meredith",
+      "city": "cruise",
+      "book_genre": "biography",
+      "house": 4
+    },
+    "Aniya": {
+      "children": "Samantha",
+      "city": "beach",
+      "book_genre": "romance",
+      "house": 5
+    },
+    "Penny": {
+      "children": "Timothy",
+      "city": "cultural",
+      "book_genre": "science fiction",
+      "house": 6
+    }
+  },
+  "puzzle_004": {
+    "Eric": {
+      "pet": "cat",
+      "house": 1
+    },
+    "Arnold": {
+      "pet": "dog",
+      "house": 2
+    }
+  },
+  "puzzle_005": {
+    "Holly": {
+      "birthday": "april",
+      "housestyle": "ranch",
+      "house": 1
+    },
+    "Kailyn": {
+      "birthday": "feb",
+      "housestyle": "colonial",
+      "house": 2
+    },
+    "Janelle": {
+      "birthday": "sept",
+      "housestyle": "victorian",
+      "house": 3
+    },
+    "Aniya": {
+      "birthday": "jan",
+      "housestyle": "craftsman",
+      "house": 4
+    }
+  },
+  "puzzle_006": {
+    "Eric": {
+      "car_model": "daffodils",
+      "color": "red",
+      "height": "short",
+      "house": 1
+    },
+    "Arnold": {
+      "car_model": "carnations",
+      "color": "yellow",
+      "height": "very short",
+      "house": 2
+    }
+  },
+  "puzzle_007": {
+    "Arnold": {
+      "education": "bachelor",
+      "color": "blue",
+      "city": "camping",
+      "phone": "samsung galaxy s21",
+      "house": 1
+    },
+    "Eric": {
+      "education": "high school",
+      "color": "green",
+      "city": "beach",
+      "phone": "huawei p50",
+      "house": 2
+    },
+    "Peter": {
+      "education": "associate",
+      "color": "white",
+      "city": "city",
+      "phone": "iphone 13",
+      "house": 3
+    },
+    "Alice": {
+      "education": "master",
+      "color": "red",
+      "city": "cruise",
+      "phone": "google pixel 6",
+      "house": 4
+    },
+    "Bob": {
+      "education": "doctorate",
+      "color": "yellow",
+      "city": "mountain",
+      "phone": "oneplus 9",
+      "house": 5
+    }
+  },
+  "puzzle_008": {
+    "Peter": {
+      "color": "white",
+      "phone": "google pixel 6",
+      "genre": "pop",
+      "education": "high school",
+      "house": 1
+    },
+    "Eric": {
+      "color": "yellow",
+      "phone": "samsung galaxy s21",
+      "genre": "rock",
+      "education": "associate",
+      "house": 2
+    },
+    "Arnold": {
+      "color": "red",
+      "phone": "iphone 13",
+      "genre": "classical",
+      "education": "bachelor",
+      "house": 3
+    }
+  },
+  "puzzle_009": {
+    "Holly": {
+      "book_genre": "science fiction",
+      "color": "yellow",
+      "city": "city",
+      "house": 1
+    },
+    "Kailyn": {
+      "book_genre": "mystery",
+      "color": "white",
+      "city": "mountain",
+      "house": 2
+    },
+    "Aniya": {
+      "book_genre": "fantasy",
+      "color": "red",
+      "city": "cruise",
+      "house": 3
+    },
+    "Janelle": {
+      "book_genre": "romance",
+      "color": "green",
+      "city": "beach",
+      "house": 4
+    }
+  }
+}

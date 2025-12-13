@@ -1,0 +1,82 @@
+{
+  "summary": {
+    "total_puzzles": 10,
+    "solved": 9,
+    "accuracy": 90.0,
+    "avg_steps": 31.0,
+    "avg_time_ms": 9.505033493041992,
+    "total_time_seconds": 0.09992003440856934
+  },
+  "details": [
+    {
+      "puzzle_id": "puzzle_000",
+      "solved": true,
+      "steps": 141,
+      "backtracks": 125,
+      "time_seconds": 0.061840057373046875
+    },
+    {
+      "puzzle_id": "puzzle_001",
+      "solved": true,
+      "steps": 17,
+      "backtracks": 0,
+      "time_seconds": 0.0015339851379394531
+    },
+    {
+      "puzzle_id": "puzzle_002",
+      "solved": false,
+      "steps": 7,
+      "backtracks": 13,
+      "time_seconds": 0.003912687301635742
+    },
+    {
+      "puzzle_id": "puzzle_003",
+      "solved": true,
+      "steps": 25,
+      "backtracks": 0,
+      "time_seconds": 0.01020503044128418
+    },
+    {
+      "puzzle_id": "puzzle_004",
+      "solved": true,
+      "steps": 5,
+      "backtracks": 0,
+      "time_seconds": 0.000133514404296875
+    },
+    {
+      "puzzle_id": "puzzle_005",
+      "solved": true,
+      "steps": 13,
+      "backtracks": 1,
+      "time_seconds": 0.0018541812896728516
+    },
+    {
+      "puzzle_id": "puzzle_006",
+      "solved": true,
+      "steps": 9,
+      "backtracks": 0,
+      "time_seconds": 0.000247955322265625
+    },
+    {
+      "puzzle_id": "puzzle_007",
+      "solved": true,
+      "steps": 36,
+      "backtracks": 17,
+      "time_seconds": 0.012581586837768555
+    },
+    {
+      "puzzle_id": "puzzle_008",
+      "solved": true,
+      "steps": 16,
+      "backtracks": 0,
+      "time_seconds": 0.0009348392486572266
+    },
+    {
+      "puzzle_id": "puzzle_009",
+      "solved": true,
+      "steps": 17,
+      "backtracks": 0,
+      "time_seconds": 0.001806497573852539
+    }
+  ]
+}
