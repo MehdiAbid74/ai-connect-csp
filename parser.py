@@ -54,56 +54,53 @@ CHOICES = [
 SOLUTION_TEMPLATE = None
 
 # =============================================================================
-# UTILITY FUNCTIONS
+# utility functions
 # =============================================================================
 
 def isGridPuzzle() -> bool:
-    """
-    Determines whether this is a grid puzzle or multiple choice.
-    
-    Returns:
-        True if grid puzzle, False if multiple choice
-    """
-    # Grid puzzle has GRID_SIZE and SOLUTION_TEMPLATE
-    # Multiple choice has QUESTION and CHOICES
-    if GRID_SIZE is not None and SOLUTION_TEMPLATE is not None:
+    """determines if grid puzzle or multiple choice"""
+    # grid puzzle has solution_template
+    # multiple choice has question and choices
+    if SOLUTION_TEMPLATE is not None:
         return True
     elif QUESTION is not None and CHOICES is not None:
         return False
     else:
-        # Fallback: search for "Question:" in text
+        # fallback: search for "Question:" in text
         if PUZZLE_TEXT and "Question:" in PUZZLE_TEXT:
             return False
         return True
 
 
+def compute_grid_size(num_houses: int, attributes: Dict[str, List[str]]) -> Tuple[int, int]:
+    """computes grid size from puzzle data"""
+    x = num_houses
+    y = len(attributes)
+    return (x, y)
+
+
 def parse_puzzle_header(text: str) -> Dict[str, Any]:
-    """
-    Parses the puzzle header and extracts attributes and values.
-    
-    Returns:
-        Dict with 'num_houses', 'attributes' (Dict of attribute_name -> [values])
-    """
+    """parses puzzle header and extracts attributes and values"""
     result = {
         'num_houses': 0,
         'attributes': {}
     }
     
-    # Extract number of houses
+    # extract number of houses
     house_match = re.search(r'There are (\d+) houses', text)
     if house_match:
         result['num_houses'] = int(house_match.group(1))
     
-    # Extract attributes - look for lines with attribute definitions
+    # extract attributes - look for lines with attribute definitions
     lines = text.split('\n')
     
     for line in lines:
-        # Search for attribute definitions
-        # Pattern: "- Each person has a unique [attribute]: `value1`, `value2`, ..."
+        # search for attribute definitions
+        # pattern: "- Each person has a unique [attribute]: `value1`, `value2`, ..."
         attr_match = re.search(r'-\s*.*?(?:name|nationality|book genre|food|color|animal|sport|car model)s?:\s*`(.+?)(?:`\s*$|$)', line, re.IGNORECASE)
         
         if attr_match:
-            # Determine attribute type from line
+            # determine attribute type from line
             attr_type = None
             if 'name' in line.lower():
                 attr_type = 'Name'
@@ -123,10 +120,10 @@ def parse_puzzle_header(text: str) -> Dict[str, Any]:
                 attr_type = 'CarModel'
             
             if attr_type:
-                # Extract values (separated by `, `)
+                # extract values (separated by `, `)
                 values_str = attr_match.group(1)
                 values = [v.strip().strip('`').strip() for v in re.split(r'`,\s*`|`,\s*|,\s*`', values_str)]
-                values = [v for v in values if v]  # Remove empty strings
+                values = [v for v in values if v]  # remove empty strings
                 
                 result['attributes'][attr_type] = values
     
@@ -134,20 +131,15 @@ def parse_puzzle_header(text: str) -> Dict[str, Any]:
 
 
 def parse_clues(text: str) -> List[str]:
-    """
-    Extracts all clues from the text.
-    
-    Returns:
-        List of clue strings
-    """
+    """extracts all clues from the text"""
     clues = []
     
-    # Search for "## Clues:" and extract numbered list
+    # search for "## Clues:" and extract numbered list
     clues_section = re.search(r'##\s*Clues?:\s*\n(.*?)(?:\n##|\nQuestion:|\nPuzzle:|\nChoices:|\Z)', text, re.DOTALL | re.IGNORECASE)
     
     if clues_section:
         clues_text = clues_section.group(1)
-        # Extract numbered lines
+        # extract numbered lines
         clue_matches = re.findall(r'\d+\.\s*(.+?)(?=\n\d+\.|\Z)', clues_text, re.DOTALL)
         clues = [c.strip() for c in clue_matches if c.strip()]
     
@@ -155,17 +147,12 @@ def parse_clues(text: str) -> List[str]:
 
 
 def extract_entity(text: str, attributes: Dict[str, List[str]]) -> Tuple[Optional[str], Optional[str]]:
-    """
-    Extracts an entity (attribute value) from text.
-    
-    Returns:
-        Tuple of (attribute_name, value) or (None, None)
-    """
+    """extracts an entity (attribute value) from text"""
     text_lower = text.lower()
     
     for attr_name, values in attributes.items():
         for value in values:
-            # Check if this value appears in the text
+            # check if this value appears in the text
             if value.lower() in text_lower:
                 return (attr_name, value)
     
@@ -173,16 +160,11 @@ def extract_entity(text: str, attributes: Dict[str, List[str]]) -> Tuple[Optiona
 
 
 def extract_two_entities(clue: str, attributes: Dict[str, List[str]]) -> Tuple[Optional[Tuple], Optional[Tuple]]:
-    """
-    Extracts two entities from a clue.
-    
-    Returns:
-        Tuple of ((attr1, val1), (attr2, val2))
-    """
+    """extracts two entities from a clue"""
     found_entities = []
     clue_lower = clue.lower()
     
-    # Sort attributes by value length (longest first) to avoid partial matches
+    # sort attributes by value length (longest first) to avoid partial matches
     all_values = []
     for attr_name, values in attributes.items():
         for value in values:
@@ -190,7 +172,7 @@ def extract_two_entities(clue: str, attributes: Dict[str, List[str]]) -> Tuple[O
     
     all_values.sort(key=lambda x: x[2], reverse=True)
     
-    # Track which parts of the clue we've already matched
+    # track which parts of the clue we've already matched
     matched_positions = []
     
     for attr_name, value, _ in all_values:
@@ -198,7 +180,7 @@ def extract_two_entities(clue: str, attributes: Dict[str, List[str]]) -> Tuple[O
         pos = clue_lower.find(value_lower)
         
         if pos != -1:
-            # Check if this position overlaps with already matched text
+            # check if this position overlaps with already matched text
             overlaps = False
             for start, end in matched_positions:
                 if not (pos >= end or pos + len(value_lower) <= start):
@@ -218,17 +200,12 @@ def extract_two_entities(clue: str, attributes: Dict[str, List[str]]) -> Tuple[O
 
 
 def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_houses: int) -> Dict[str, Any]:
-    """
-    Parses a single clue and returns constraint information.
-    
-    Returns:
-        Dict with constraint type and parameters
-    """
+    """parses a single clue and returns constraint information"""
     clue_lower = clue.lower()
     
-    # Check constraint types in order of specificity (most specific first)
+    # check constraint types in order of specificity (most specific first)
     
-    # Type 9: "not in the first house" (must check before "in the first house")
+    # "not in the first house" (must check before "in the first house")
     if 'not in the first house' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -237,7 +214,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Type 8: "in the first house"
+    # "in the first house"
     if 'in the first house' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -246,7 +223,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Type 2: "directly left of" (must check before "left of")
+    # "directly left of" (must check before "left of")
     if 'directly left of' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -255,7 +232,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Type 3: "next to each other"
+    # "next to each other"
     if 'next to each other' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -264,7 +241,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Type 6: "one house between"
+    # "one house between"
     if 'one house between' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -273,7 +250,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Type 7: "two houses between"
+    # "two houses between"
     if 'two houses between' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -282,7 +259,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Type 4: "somewhere to the left"
+    # "somewhere to the left"
     if 'somewhere to the left' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -291,7 +268,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Type 5: "somewhere to the right"
+    # "somewhere to the right"
     if 'somewhere to the right' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -300,7 +277,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Type 1: "X is Y" (direct equality) - check last since it's most general
+    # "X is Y" (direct equality) - check last since it's most general
     if ' is the ' in clue_lower or ' is ' in clue_lower:
         entities = extract_two_entities(clue, attributes)
         return {
@@ -309,7 +286,7 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
             'entities': entities
         }
     
-    # Unknown type
+    # unknown type
     entities = extract_two_entities(clue, attributes)
     return {
         'type': 'unknown',
@@ -319,55 +296,45 @@ def parse_clue_to_constraint(clue: str, attributes: Dict[str, List[str]], num_ho
 
 
 # =============================================================================
-# CSP SOLVER
+# csp solver
 # =============================================================================
 
 def solve_grid_puzzle(puzzle_data: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Solves a grid puzzle using CSP solver.
-    
-    Returns:
-        Dict with filled solution grid
-    """
+    """solves a grid puzzle using csp solver"""
     num_houses = puzzle_data['num_houses']
     attributes = puzzle_data['attributes']
     clues = puzzle_data['clues']
     
     problem = Problem()
     
-    # Add variables: for each value of each attribute, a variable
-    # Variable = (AttributeName, Value) -> House number (1 to num_houses)
+    # add variables: for each value of each attribute, a variable
+    # variable = (AttributeName, Value) -> house number (1 to num_houses)
     for attr_name, values in attributes.items():
         for value in values:
             var_name = f"{attr_name}_{value}"
             problem.addVariable(var_name, range(1, num_houses + 1))
     
-    # AllDifferent for each attribute
+    # alldifferent for each attribute
     for attr_name, values in attributes.items():
         vars_for_attr = [f"{attr_name}_{value}" for value in values]
         problem.addConstraint(AllDifferentConstraint(), vars_for_attr)
     
-    # Add constraints from clues
+    # add constraints from clues
     for clue_info in clues:
         add_constraint_from_clue(problem, clue_info, attributes)
     
-    # Find solution
+    # find solution
     solutions = problem.getSolutions()
     
     if solutions:
         solution = solutions[0]
         return format_grid_solution(solution, attributes, num_houses)
     else:
-        return {"error": "No solution found"}
+        return {"error": "no solution found"}
 
 
 def solve_multiple_choice(puzzle_data: Dict[str, Any]) -> str:
-    """
-    Solves a multiple choice puzzle using CSP solver.
-    
-    Returns:
-        String with the answer
-    """
+    """solves a multiple choice puzzle using csp solver"""
     num_houses = puzzle_data['num_houses']
     attributes = puzzle_data['attributes']
     clues = puzzle_data['clues']
@@ -376,20 +343,20 @@ def solve_multiple_choice(puzzle_data: Dict[str, Any]) -> str:
     
     problem = Problem()
     
-    # Add variables
-    print(f"\nAdding variables for {num_houses} houses...")
+    # add variables
+    print(f"\nadding variables for {num_houses} houses...")
     for attr_name, values in attributes.items():
         for value in values:
             var_name = f"{attr_name}_{value}"
             problem.addVariable(var_name, range(1, num_houses + 1))
     
-    # AllDifferent for each attribute
+    # alldifferent for each attribute
     for attr_name, values in attributes.items():
         vars_for_attr = [f"{attr_name}_{value}" for value in values]
         problem.addConstraint(AllDifferentConstraint(), vars_for_attr)
     
-    # Add constraints from clues
-    print(f"Adding {len(clues)} constraints...")
+    # add constraints from clues
+    print(f"adding {len(clues)} constraints...")
     constraints_added = 0
     for clue_info in clues:
         try:
@@ -397,22 +364,22 @@ def solve_multiple_choice(puzzle_data: Dict[str, Any]) -> str:
             if clue_info['type'] != 'unknown':
                 constraints_added += 1
         except Exception as e:
-            print(f"Warning: Could not add constraint for clue: {clue_info['clue'][:50]}...")
-            print(f"  Error: {e}")
+            print(f"warning: could not add constraint for clue: {clue_info['clue'][:50]}...")
+            print(f"  error: {e}")
     
-    print(f"Successfully added {constraints_added} constraints")
+    print(f"successfully added {constraints_added} constraints")
     
-    # Find solution
-    print("Solving...")
+    # find solution
+    print("solving...")
     solutions = problem.getSolutions()
     
-    print(f"Found {len(solutions)} solution(s)")
+    print(f"found {len(solutions)} solution(s)")
     
     if solutions:
         solution = solutions[0]
         
-        # Debug: print the full solution
-        print("\nFull solution:")
+        # debug: print the full solution
+        print("\nfull solution:")
         grid = format_grid_solution(solution, attributes, num_houses)
         if 'header' in grid:
             print(" | ".join(grid['header']))
@@ -423,30 +390,23 @@ def solve_multiple_choice(puzzle_data: Dict[str, Any]) -> str:
         answer = extract_answer_from_solution(solution, question, choices, attributes)
         return answer
     else:
-        return "No solution found"
+        return "no solution found"
 
 
 def add_constraint_from_clue(problem: Problem, clue_info: Dict, attributes: Dict):
-    """
-    Adds constraints to the CSP problem based on clue type.
-    
-    Args:
-        problem: The CSP problem instance
-        clue_info: Dictionary containing clue type and entities
-        attributes: Dictionary of all attributes and their values
-    """
+    """adds constraints to the csp problem based on clue type"""
     clue_type = clue_info['type']
     entities = clue_info['entities']
     clue_lower = clue_info['clue'].lower()
     
-    # For first_house and not_first_house, we only need one entity
+    # for first_house and not_first_house, we only need one entity
     if clue_type in ['first_house', 'not_first_house']:
         if entities[0] is None:
             return
         attr1, val1 = entities[0]
         var1 = f"{attr1}_{val1}"
     else:
-        # For other constraint types, we need both entities
+        # for other constraint types, we need both entities
         if entities[0] is None or entities[1] is None:
             return
         
@@ -456,89 +416,79 @@ def add_constraint_from_clue(problem: Problem, clue_info: Dict, attributes: Dict
         var1 = f"{attr1}_{val1}"
         var2 = f"{attr2}_{val2}"
         
-        # For directional constraints, we need to determine the correct order
+        # for directional constraints, determine correct order
         # by checking which entity appears first in the clue text
         if clue_type in ['directly_left', 'left_of', 'right_of']:
             pos1 = clue_lower.find(val1.lower())
             pos2 = clue_lower.find(val2.lower())
             
-            # If entity2 appears before entity1, swap them
+            # if entity2 appears before entity1, swap them
             if pos2 < pos1:
                 var1, var2 = var2, var1
     
     if clue_type == 'equality':
-        # Type 1: Both entities are in the same house
-        # Example: "The German is Bob" -> house(German) == house(Bob)
+        # both entities are in the same house
+        # example: "the german is bob" -> house(german) == house(bob)
         problem.addConstraint(lambda x, y: x == y, [var1, var2])
     
     elif clue_type == 'directly_left':
-        # Type 2: Entity 1 is directly left of entity 2
-        # Example: "The dog owner is directly left of the fish enthusiast"
+        # entity 1 is directly left of entity 2
+        # example: "the dog owner is directly left of the fish enthusiast"
         # house(dog owner) == house(fish enthusiast) - 1
         problem.addConstraint(lambda x, y: x == y - 1, [var1, var2])
     
     elif clue_type == 'next_to':
-        # Type 3: Entities are next to each other
-        # Example: "Alice and the person who loves volleyball are next to each other"
-        # |house(Alice) - house(volleyball)| == 1
+        # entities are next to each other
+        # example: "alice and the person who loves volleyball are next to each other"
+        # |house(alice) - house(volleyball)| == 1
         problem.addConstraint(lambda x, y: abs(x - y) == 1, [var1, var2])
     
     elif clue_type == 'left_of':
-        # Type 4: Entity 1 is somewhere to the left of entity 2
-        # Example: "The person who loves blue is somewhere to the left of the Dane"
-        # house(blue) < house(Dane)
+        # entity 1 is somewhere to the left of entity 2
+        # example: "the person who loves blue is somewhere to the left of the dane"
+        # house(blue) < house(dane)
         problem.addConstraint(lambda x, y: x < y, [var1, var2])
     
     elif clue_type == 'right_of':
-        # Type 5: Entity 1 is somewhere to the right of entity 2
-        # Example: "Peter is somewhere to the right of Carol"
-        # house(Peter) > house(Carol)
+        # entity 1 is somewhere to the right of entity 2
+        # example: "peter is somewhere to the right of carol"
+        # house(peter) > house(carol)
         problem.addConstraint(lambda x, y: x > y, [var1, var2])
     
     elif clue_type == 'one_between':
-        # Type 6: There is one house between two entities
-        # Example: "There is one house between the Norwegian and Arnold"
-        # |house(Norwegian) - house(Arnold)| == 2
+        # there is one house between two entities
+        # example: "there is one house between the norwegian and arnold"
+        # |house(norwegian) - house(arnold)| == 2
         problem.addConstraint(lambda x, y: abs(x - y) == 2, [var1, var2])
     
     elif clue_type == 'two_between':
-        # Type 7: There are two houses between two entities
-        # Example: "There are two houses between the Norwegian and Alice"
-        # |house(Norwegian) - house(Alice)| == 3
+        # there are two houses between two entities
+        # example: "there are two houses between the norwegian and alice"
+        # |house(norwegian) - house(alice)| == 3
         problem.addConstraint(lambda x, y: abs(x - y) == 3, [var1, var2])
     
     elif clue_type == 'first_house':
-        # Type 8: Entity is in the first house
-        # Example: "The person who loves tennis is in the first house"
+        # entity is in the first house
+        # example: "the person who loves tennis is in the first house"
         problem.addConstraint(lambda x: x == 1, [var1])
     
     elif clue_type == 'not_first_house':
-        # Type 9: Entity is not in the first house
-        # Example: "The person who owns a Chevrolet Silverado is not in the first house"
+        # entity is not in the first house
+        # example: "the person who owns a chevrolet silverado is not in the first house"
         problem.addConstraint(lambda x: x != 1, [var1])
 
 
 def format_grid_solution(solution: Dict, attributes: Dict, num_houses: int) -> Dict:
-    """
-    Formats the solution as a grid.
-    
-    Args:
-        solution: Dictionary mapping variable names to house numbers
-        attributes: Dictionary of all attributes and their values
-        num_houses: Total number of houses
-    
-    Returns:
-        Dictionary with 'header' and 'rows' for the solution grid
-    """
-    # Create header
+    """formats the solution as a grid"""
+    # create header
     header = ["House"] + list(attributes.keys())
     
-    # Create rows
+    # create rows
     rows = []
     for house in range(1, num_houses + 1):
         row = [str(house)]
         for attr_name in attributes.keys():
-            # Find the value for this attribute in this house
+            # find the value for this attribute in this house
             value = "___"
             for attr_value in attributes[attr_name]:
                 var_name = f"{attr_name}_{attr_value}"
@@ -552,26 +502,15 @@ def format_grid_solution(solution: Dict, attributes: Dict, num_houses: int) -> D
 
 
 def extract_answer_from_solution(solution: Dict, question: str, choices: List[str], attributes: Dict) -> str:
-    """
-    Extracts the answer to the question from the solution.
-    
-    Args:
-        solution: Dictionary mapping variable names to house numbers
-        question: The question being asked
-        choices: List of possible answers
-        attributes: Dictionary of all attributes
-    
-    Returns:
-        The answer string
-    """
-    # Example: "What is Name of the person who lives in House 5?"
+    """extracts the answer to the question from the solution"""
+    # example: "what is name of the person who lives in house 5?"
     house_match = re.search(r'House (\d+)', question)
     
     if house_match:
         target_house = int(house_match.group(1))
         
-        # Determine what attribute is being asked for
-        # Usually it's the Name
+        # determine what attribute is being asked for
+        # usually it's the name
         target_attr = None
         if 'name' in question.lower():
             target_attr = 'Name'
@@ -585,49 +524,52 @@ def extract_answer_from_solution(solution: Dict, question: str, choices: List[st
             target_attr = 'CarModel'
         
         if target_attr and target_attr in attributes:
-            # Find the value of this attribute in the target house
+            # find the value of this attribute in the target house
             for value in attributes[target_attr]:
                 var_name = f"{target_attr}_{value}"
                 if solution.get(var_name) == target_house:
                     return value
     
-    return "Unknown"
+    return "unknown"
 
 
 # =============================================================================
-# MAIN SOLVER
+# main solver
 # =============================================================================
 
 def solve_puzzle():
-    """
-    Main function: determines puzzle type and solves it accordingly.
-    """
+    """main function: determines puzzle type and solves it accordingly"""
     if PUZZLE_TEXT is None:
-        print("Error: PUZZLE_TEXT is not set!")
+        print("error: PUZZLE_TEXT is not set!")
         return
     
-    # Parse puzzle
+    # parse puzzle
     puzzle_data = parse_puzzle_header(PUZZLE_TEXT)
     puzzle_data['clues'] = [parse_clue_to_constraint(c, puzzle_data['attributes'], puzzle_data['num_houses']) 
                             for c in parse_clues(PUZZLE_TEXT)]
     
-    print(f"\nParsed {puzzle_data['num_houses']} houses")
-    print(f"Attributes: {list(puzzle_data['attributes'].keys())}")
-    print(f"Number of clues: {len(puzzle_data['clues'])}")
+    # compute grid size
+    grid_size = compute_grid_size(puzzle_data['num_houses'], puzzle_data['attributes'])
     
-    # Debug: show parsed clues
-    print("\nParsed clue types:")
+    print(f"\nparsed {puzzle_data['num_houses']} houses")
+    print(f"attributes: {list(puzzle_data['attributes'].keys())}")
+    print(f"grid size: {grid_size[0]} houses x {grid_size[1]} attributes")
+    print(f"number of clues: {len(puzzle_data['clues'])}")
+    
+    # debug: show parsed clues
+    print("\nparsed clue types:")
     for i, clue_info in enumerate(puzzle_data['clues'], 1):
-        print(f"  {i}. Type: {clue_info['type']}, Entities: {clue_info['entities']}")
+        print(f"  {i}. type: {clue_info['type']}, entities: {clue_info['entities']}")
     
-    # Determine puzzle type
+    # determine puzzle type
     if isGridPuzzle():
-        print("\n=== GRID PUZZLE ===")
+        print("\n=== grid puzzle ===")
         puzzle_data['solution_template'] = SOLUTION_TEMPLATE
+        puzzle_data['grid_size'] = grid_size
         result = solve_grid_puzzle(puzzle_data)
-        print("\nSolution:")
+        print("\nsolution:")
         if 'header' in result:
-            # Print as formatted table
+            # print as formatted table
             print(" | ".join(result['header']))
             print("-" * (len(" | ".join(result['header']))))
             for row in result['rows']:
@@ -635,20 +577,21 @@ def solve_puzzle():
         else:
             print(result)
     else:
-        print("\n=== MULTIPLE CHOICE PUZZLE ===")
+        print("\n=== multiple choice puzzle ===")
         puzzle_data['question'] = QUESTION
         puzzle_data['choices'] = CHOICES
+        puzzle_data['grid_size'] = grid_size
         result = solve_multiple_choice(puzzle_data)
-        print(f"\nAnswer: {result}")
+        print(f"\nanswer: {result}")
 
 
 # =============================================================================
-# EXECUTION
+# execution
 # =============================================================================
 
 if __name__ == "__main__":
-    # Check if data is set
+    # check if data is set
     if PUZZLE_TEXT is None:
-        print("Please set PUZZLE_TEXT and other variables at the top of the script!")
+        print("please set PUZZLE_TEXT and other variables at the top of the script!")
     else:
         solve_puzzle()
