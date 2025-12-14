@@ -1,0 +1,12 @@
+# AI Connect 2025 - CSP Solver Dependencies
+
+# Required
+datasets>=2.14.0          # HuggingFace datasets for ZebraLogicBench
+
+# Optional - for evaluation notebook
+pandas>=1.5.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Optional - legacy parser compatibility
+python-constraint>=1.4.0
