@@ -29,25 +29,12 @@ ai-connect-csp/
 
 ### 1. Setup Environment
 
+## python contraint wont install 😭
+Solution:
 ```bash
-# Create virtual environment
-python -m venv venv
-
-# Activate it
-# Windows:
-venv\Scripts\activate
-# Linux/Mac:
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
+pip install python-constraint
 ```
-
-### 2. Install Dependencies
-
-```bash
-pip install datasets pandas matplotlib seaborn
-```
+(not just constraint)
 
 ### 3. Run the Solver
 
