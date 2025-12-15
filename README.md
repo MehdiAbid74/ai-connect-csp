@@ -2,7 +2,7 @@
 
 A Constraint Satisfaction Problem (CSP) solver for logic grid puzzles (Zebra puzzles) built for the AI Connect 2025 challenge.
 
-## 🎯 Overview
+## Overview
 
 This project implements a symbolic CSP solver with:
 - **Backtracking search** with intelligent variable/value ordering
@@ -11,7 +11,7 @@ This project implements a symbolic CSP solver with:
 - **AC-3 (Arc Consistency)** for constraint propagation
 - **Trace generation** for analyzing search behavior
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ai-connect-csp/
@@ -25,11 +25,11 @@ ai-connect-csp/
 └── README.md          # This file
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Setup Environment
 
-## python contraint wont install 😭
+**python contraint wont install**
 Solution:
 ```bash
 pip install python-constraint
@@ -53,7 +53,7 @@ python run.py --help             # Show all options
 
 Open `evaluation.ipynb` in Jupyter or VS Code and run all cells.
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 The solver is evaluated using:
 
@@ -62,7 +62,7 @@ The solver is evaluated using:
 - **Composite Score** = Accuracy - α × (AvgSteps / MaxAvgSteps)
   - Where α = 10 is the efficiency penalty weight
 
-## 🔧 Solver Architecture
+## Solver Architecture
 
 ### CSP Formulation
 
@@ -100,7 +100,7 @@ For a puzzle with N houses and M attributes:
      - AC-3 propagation
      - Recursive search or backtrack
 
-## 📈 Output Format
+## Output Format
 
 ### results.json
 
@@ -130,7 +130,7 @@ For a puzzle with N houses and M attributes:
 ]
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Test individual components
@@ -142,15 +142,15 @@ python trace_generator.py # Test trace generation
 python parser.py
 ```
 
-## 📝 Submission Checklist
+## Submission Checklist
 
-- [x] `solver.py` - CSP solver implementation
-- [x] `run.py` - Script to run solver on test puzzles
-- [x] `README.md` - Approach explanation
-- [x] `results.json` - Generated output for test set
-- [x] `evaluation.ipynb` - Analysis notebook
+- [] `solver.py` - CSP solver implementation
+- [] `run.py` - Script to run solver on test puzzles
+- [] `README.md` - Approach explanation
+- [] `results.json` - Generated output for test set
+- [] `evaluation.ipynb` - Analysis notebook
 
-## 🔬 Approach Summary
+## Approach Summary
 
 Our solver uses a **constraint propagation + backtracking** approach:
 
@@ -166,16 +166,9 @@ Our solver uses a **constraint propagation + backtracking** approach:
    - Domain pruning at each step
    - Early failure detection
 
-## 📚 References
+## References
 
 - ZebraLogicBench: https://huggingface.co/datasets/allenai/ZebraLogicBench
 - AC-3 Algorithm: Mackworth, 1977
 - Backtracking Search: Russell & Norvig, AIMA
 
-## 👥 Team
-
-AI Connect 2025 - CSP Solver Challenge
-
----
-
-*Built for AI Connect 2025 - A collaborative project between HSBI (Germany), TDU (Türkiye), SEECS/NUST (Pakistan), and CST/RUB (Bhutan)*
