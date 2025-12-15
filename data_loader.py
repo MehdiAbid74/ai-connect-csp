@@ -158,12 +158,20 @@ def parse_puzzle_header(text: str) -> Dict[str, Any]:
         'attributes': {}
     }
     
+    # Word to number mapping
+    word_to_num = {
+        'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6,
+        'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10
+    }
+    
     # Extract number of houses (handle various formats)
+    # First try digit patterns
     house_patterns = [
         r'There are (\d+) houses',
         r'(\d+) houses',
         r'(\d+) people',
         r'(\d+) friends',
+        r'numbered 1 to (\d+)',
     ]
     
     for pattern in house_patterns:
@@ -171,6 +179,19 @@ def parse_puzzle_header(text: str) -> Dict[str, Any]:
         if match:
             result['num_houses'] = int(match.group(1))
             break
+    
+    # If not found, try word patterns (Three friends, Four houses)
+    if result['num_houses'] == 0:
+        word_patterns = [
+            r'(two|three|four|five|six|seven|eight|nine|ten)\s+(?:houses|friends|people|persons)',
+        ]
+        for pattern in word_patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                word = match.group(1).lower()
+                if word in word_to_num:
+                    result['num_houses'] = word_to_num[word]
+                    break
     
     # Default to 5 if not found
     if result['num_houses'] == 0:
@@ -267,42 +288,98 @@ def parse_puzzle_header(text: str) -> Dict[str, Any]:
     
     attr_counter = 0
     for line in lines:
-        line_lower = line.lower()
+        line_lower = line.lower().strip()
         
-        # Skip non-attribute lines
-        if not line.strip().startswith('-') and 'unique' not in line_lower:
+        # Skip empty lines and clue lines
+        if not line.strip() or line.strip().startswith(('Clues', '#')):
+            continue
+        if re.match(r'^\d+\.', line.strip()):  # Skip numbered clues
             continue
         
-        # Extract values first - look for backtick-quoted values
-        values = re.findall(r'`([^`]+)`', line)
+        # Method 1: Lines starting with dash (- Name: `Alice`, `Bob`)
+        if line.strip().startswith('-') or 'unique' in line_lower:
+            # Extract values from backtick-quoted values
+            values = re.findall(r'`([^`]+)`', line)
+            
+            if not values:
+                # Try comma-separated values after colon
+                colon_match = re.search(r':\s*(.+)$', line)
+                if colon_match:
+                    values_text = colon_match.group(1)
+                    values = [v.strip().strip('`"\'') for v in values_text.split(',')]
+            
+            if values:
+                values = [v.strip() for v in values if v.strip()]
+                # Find attribute type from keywords
+                attr_type = None
+                for keyword, attr_name in attribute_keywords.items():
+                    if keyword in line_lower:
+                        attr_type = attr_name
+                        break
+                
+                if not attr_type:
+                    attr_counter += 1
+                    attr_type = f'Attr{attr_counter}'
+                
+                if values:
+                    result['attributes'][attr_type] = values
         
-        if not values:
-            # Try comma-separated values after colon
-            colon_match = re.search(r':\s*(.+)$', line)
+        # Method 2: Simple format (Colors: red, blue, green.)
+        else:
+            # Check if line has format "Keyword: value1, value2, value3."
+            colon_match = re.match(r'^([A-Za-z\s]+):\s*(.+)$', line.strip())
             if colon_match:
-                values_text = colon_match.group(1)
-                values = [v.strip().strip('`"\'') for v in values_text.split(',')]
+                keyword_part = colon_match.group(1).strip().lower()
+                values_part = colon_match.group(2).strip().rstrip('.')
+                
+                # Extract comma-separated values
+                values = [v.strip() for v in values_part.split(',') if v.strip()]
+                
+                if values:
+                    # Find attribute type from keywords
+                    attr_type = None
+                    for keyword, attr_name in attribute_keywords.items():
+                        if keyword in keyword_part:
+                            attr_type = attr_name
+                            break
+                    
+                    if not attr_type:
+                        attr_counter += 1
+                        attr_type = f'Attr{attr_counter}'
+                    
+                    result['attributes'][attr_type] = values
+    
+    # Also extract names from the puzzle intro (e.g., "Three friends" or person names in clues)
+    # Look for "friends" pattern with names
+    if 'Name' not in result['attributes']:
+        # Try to find names from the text
+        name_patterns = [
+            r'(?:friends|people|persons).*?(?:are|named)?\s*[:\-]?\s*([A-Z][a-z]+(?:\s*,\s*[A-Z][a-z]+)+)',
+        ]
+        for pattern in name_patterns:
+            match = re.search(pattern, text)
+            if match:
+                names = [n.strip() for n in match.group(1).split(',')]
+                if names:
+                    result['attributes']['Name'] = names
+                    break
         
-        if not values:
-            continue
-        
-        values = [v.strip() for v in values if v.strip()]
-        if not values:
-            continue
-        
-        # Find attribute type from keywords
-        attr_type = None
-        for keyword, attr_name in attribute_keywords.items():
-            if keyword in line_lower:
-                attr_type = attr_name
-                break
-        
-        # If no keyword match, generate a unique attribute name
-        if not attr_type:
-            attr_counter += 1
-            attr_type = f'Attr{attr_counter}'
-        
-        result['attributes'][attr_type] = values
+        # If still no names, extract from clues (names that appear)
+        if 'Name' not in result['attributes']:
+            # Common first names that might appear
+            potential_names = set()
+            for line in lines:
+                # Look for capitalized words that might be names
+                words = re.findall(r'\b([A-Z][a-z]+)\b', line)
+                for word in words:
+                    # Filter out common non-name words
+                    if word.lower() not in ['the', 'house', 'person', 'one', 'clues', 'three', 'four', 'five', 'six', 'each', 'colors', 'pets', 'and', 'contains']:
+                        if word[0].isupper() and len(word) > 2:
+                            potential_names.add(word)
+            
+            # Check if we found the right number of names
+            if len(potential_names) == result['num_houses']:
+                result['attributes']['Name'] = list(potential_names)
     
     return result
 

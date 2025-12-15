@@ -1,243 +1,1522 @@
 {
-  "puzzle_000": {
+  "test-3x3-001": {
     "Bob": {
-      "nationality": "german",
-      "book_genre": "mystery",
-      "lunch": "grilled cheese",
-      "color": "yellow",
-      "animal": "dog",
-      "house": 1
-    },
-    "Eric": {
-      "nationality": "norwegian",
-      "book_genre": "fantasy",
-      "lunch": "stew",
-      "color": "blue",
-      "animal": "fish",
-      "house": 2
-    },
-    "Peter": {
-      "nationality": "dane",
-      "book_genre": "science fiction",
-      "lunch": "spaghetti",
-      "color": "green",
-      "animal": "cat",
-      "house": 3
-    },
-    "Arnold": {
-      "nationality": "swede",
-      "book_genre": "biography",
-      "lunch": "stir fry",
-      "color": "red",
-      "animal": "bird",
-      "house": 4
-    },
-    "Alice": {
-      "nationality": "brit",
-      "book_genre": "romance",
-      "lunch": "pizza",
-      "color": "white",
-      "animal": "horse",
-      "house": 5
-    }
-  },
-  "puzzle_001": {
-    "Eric": {
-      "occupation": "teacher",
-      "book_genre": "science fiction",
-      "phone": "iphone 13",
-      "house": 1
-    },
-    "Arnold": {
-      "occupation": "engineer",
-      "book_genre": "romance",
-      "phone": "oneplus 9",
-      "house": 2
-    },
-    "Alice": {
-      "occupation": "artist",
-      "book_genre": "fantasy",
-      "phone": "samsung galaxy s21",
-      "house": 3
-    },
-    "Peter": {
-      "occupation": "doctor",
-      "book_genre": "mystery",
-      "phone": "google pixel 6",
-      "house": 4
-    }
-  },
-  "puzzle_002": {
-    "error": "No solution found"
-  },
-  "puzzle_003": {
-    "Sarah": {
-      "children": "Bella",
-      "city": "city",
-      "book_genre": "historical fiction",
-      "house": 1
-    },
-    "Janelle": {
-      "children": "Alice",
-      "city": "camping",
-      "book_genre": "fantasy",
-      "house": 2
-    },
-    "Holly": {
-      "children": "Fred",
-      "city": "mountain",
-      "book_genre": "mystery",
-      "house": 3
-    },
-    "Kailyn": {
-      "children": "Meredith",
-      "city": "cruise",
-      "book_genre": "biography",
-      "house": 4
-    },
-    "Aniya": {
-      "children": "Samantha",
-      "city": "beach",
-      "book_genre": "romance",
-      "house": 5
-    },
-    "Penny": {
-      "children": "Timothy",
-      "city": "cultural",
-      "book_genre": "science fiction",
-      "house": 6
-    }
-  },
-  "puzzle_004": {
-    "Eric": {
+      "color": "orange",
       "pet": "cat",
       "house": 1
     },
-    "Arnold": {
-      "pet": "dog",
-      "house": 2
-    }
-  },
-  "puzzle_005": {
-    "Holly": {
-      "birthday": "april",
-      "housestyle": "ranch",
-      "house": 1
-    },
-    "Kailyn": {
-      "birthday": "feb",
-      "housestyle": "colonial",
-      "house": 2
-    },
-    "Janelle": {
-      "birthday": "sept",
-      "housestyle": "victorian",
-      "house": 3
-    },
-    "Aniya": {
-      "birthday": "jan",
-      "housestyle": "craftsman",
-      "house": 4
-    }
-  },
-  "puzzle_006": {
-    "Eric": {
-      "car_model": "daffodils",
-      "color": "red",
-      "height": "short",
-      "house": 1
-    },
-    "Arnold": {
-      "car_model": "carnations",
-      "color": "yellow",
-      "height": "very short",
-      "house": 2
-    }
-  },
-  "puzzle_007": {
-    "Arnold": {
-      "education": "bachelor",
+    "Mallory": {
       "color": "blue",
-      "city": "camping",
-      "phone": "samsung galaxy s21",
-      "house": 1
-    },
-    "Eric": {
-      "education": "high school",
-      "color": "green",
-      "city": "beach",
-      "phone": "huawei p50",
+      "pet": "turtle",
       "house": 2
-    },
-    "Peter": {
-      "education": "associate",
-      "color": "white",
-      "city": "city",
-      "phone": "iphone 13",
-      "house": 3
     },
     "Alice": {
-      "education": "master",
+      "color": "green",
+      "pet": "dog",
+      "house": 3
+    }
+  },
+  "test-3x3-002": {
+    "House1": {
       "color": "red",
-      "city": "cruise",
-      "phone": "google pixel 6",
-      "house": 4
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "blue",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "bird"
+    }
+  },
+  "test-3x3-003": {
+    "House1": {
+      "color": "purple",
+      "pet": "cat"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "hamster"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-004": {
+    "House1": {
+      "color": "red",
+      "pet": "cat"
+    },
+    "House2": {
+      "color": "white",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-005": {
+    "House1": {
+      "color": "green",
+      "pet": "turtle"
+    },
+    "House2": {
+      "color": "white",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "blue",
+      "pet": "fish"
+    }
+  },
+  "test-3x3-006": {
+    "House1": {
+      "color": "yellow",
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "white",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-007": {
+    "Alice": {
+      "color": "red",
+      "pet": "turtle",
+      "house": 1
     },
     "Bob": {
-      "education": "doctorate",
       "color": "yellow",
-      "city": "mountain",
-      "phone": "oneplus 9",
-      "house": 5
-    }
-  },
-  "puzzle_008": {
-    "Peter": {
-      "color": "white",
-      "phone": "google pixel 6",
-      "genre": "pop",
-      "education": "high school",
-      "house": 1
-    },
-    "Eric": {
-      "color": "yellow",
-      "phone": "samsung galaxy s21",
-      "genre": "rock",
-      "education": "associate",
+      "pet": "dog",
       "house": 2
     },
-    "Arnold": {
-      "color": "red",
-      "phone": "iphone 13",
-      "genre": "classical",
-      "education": "bachelor",
+    "Heidi": {
+      "color": "blue",
+      "pet": "cat",
       "house": 3
     }
   },
-  "puzzle_009": {
-    "Holly": {
-      "book_genre": "science fiction",
-      "color": "yellow",
-      "city": "city",
+  "test-3x3-008": {
+    "Alice": {
+      "color": "white",
+      "pet": "hamster",
       "house": 1
     },
-    "Kailyn": {
-      "book_genre": "mystery",
-      "color": "white",
-      "city": "mountain",
+    "Grace": {
+      "color": "yellow",
+      "pet": "rabbit",
       "house": 2
     },
-    "Aniya": {
-      "book_genre": "fantasy",
-      "color": "red",
-      "city": "cruise",
+    "Eve": {
+      "color": "blue",
+      "pet": "fish",
       "house": 3
+    }
+  },
+  "test-3x3-009": {
+    "House1": {
+      "color": "orange",
+      "pet": "fish"
     },
-    "Janelle": {
-      "book_genre": "romance",
+    "House2": {
+      "color": "white",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-010": {
+    "Ivan": {
+      "color": "orange",
+      "pet": "bird",
+      "house": 1
+    },
+    "Eve": {
+      "color": "red",
+      "pet": "dog",
+      "house": 2
+    },
+    "Mallory": {
       "color": "green",
-      "city": "beach",
-      "house": 4
+      "pet": "rabbit",
+      "house": 3
+    }
+  },
+  "test-3x3-011": {
+    "House1": {
+      "color": "purple",
+      "pet": "fish"
+    },
+    "House2": {
+      "color": "red",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "blue",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-012": {
+    "House1": {
+      "color": "yellow",
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "blue",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-013": {
+    "Frank": {
+      "color": "orange",
+      "pet": "bird",
+      "house": 1
+    },
+    "Bob": {
+      "color": "blue",
+      "pet": "rabbit",
+      "house": 2
+    },
+    "Grace": {
+      "color": "purple",
+      "pet": "dog",
+      "house": 3
+    }
+  },
+  "test-3x3-014": {
+    "House1": {
+      "color": "blue",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "red",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-015": {
+    "House1": {
+      "color": "orange",
+      "pet": "fish"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "white",
+      "pet": "hamster"
+    }
+  },
+  "test-3x3-016": {
+    "Bob": {
+      "color": "purple",
+      "pet": "hamster",
+      "house": 1
+    },
+    "Mallory": {
+      "color": "blue",
+      "pet": "dog",
+      "house": 2
+    },
+    "Grace": {
+      "color": "yellow",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-017": {
+    "House1": {
+      "color": "orange",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "red",
+      "pet": "hamster"
+    },
+    "House3": {
+      "color": "white",
+      "pet": "cat"
+    }
+  },
+  "test-3x3-018": {
+    "House1": {
+      "color": "purple",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "green",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "yellow",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-019": {
+    "House1": {
+      "color": "orange",
+      "pet": "hamster"
+    },
+    "House2": {
+      "color": "yellow",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "cat"
+    }
+  },
+  "test-3x3-020": {
+    "House1": {
+      "color": "yellow",
+      "pet": "hamster"
+    },
+    "House2": {
+      "color": "green",
+      "pet": "turtle"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-021": {
+    "House1": {
+      "color": "blue",
+      "pet": "cat"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-022": {
+    "House1": {
+      "color": "green",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "white",
+      "pet": "dog"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "cat"
+    }
+  },
+  "test-3x3-023": {
+    "David": {
+      "color": "blue",
+      "pet": "rabbit",
+      "house": 1
+    },
+    "Eve": {
+      "color": "orange",
+      "pet": "dog",
+      "house": 2
+    },
+    "Alice": {
+      "color": "white",
+      "pet": "hamster",
+      "house": 3
+    }
+  },
+  "test-3x3-024": {
+    "House1": {
+      "color": "blue",
+      "pet": "cat"
+    },
+    "House2": {
+      "color": "red",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "fish"
+    }
+  },
+  "test-3x3-025": {
+    "Ivan": {
+      "color": "red",
+      "pet": "bird",
+      "house": 1
+    },
+    "Heidi": {
+      "color": "blue",
+      "pet": "dog",
+      "house": 2
+    },
+    "Alice": {
+      "color": "orange",
+      "pet": "hamster",
+      "house": 3
+    }
+  },
+  "test-3x3-026": {
+    "House1": {
+      "color": "green",
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "red",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "yellow",
+      "pet": "cat"
+    }
+  },
+  "test-3x3-027": {
+    "Ivan": {
+      "color": "white",
+      "pet": "hamster",
+      "house": 1
+    },
+    "Niaj": {
+      "color": "purple",
+      "pet": "bird",
+      "house": 2
+    },
+    "Frank": {
+      "color": "yellow",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-028": {
+    "Eve": {
+      "color": "purple",
+      "pet": "rabbit",
+      "house": 1
+    },
+    "Heidi": {
+      "color": "orange",
+      "pet": "dog",
+      "house": 2
+    },
+    "Frank": {
+      "color": "yellow",
+      "pet": "bird",
+      "house": 3
+    }
+  },
+  "test-3x3-029": {
+    "House1": {
+      "color": "purple",
+      "pet": "cat"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "turtle"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "dog"
+    }
+  },
+  "test-3x3-030": {
+    "House1": {
+      "color": "yellow",
+      "pet": "turtle"
+    },
+    "House2": {
+      "color": "green",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "fish"
+    }
+  },
+  "test-3x3-031": {
+    "Niaj": {
+      "color": "green",
+      "pet": "bird",
+      "house": 1
+    },
+    "Carol": {
+      "color": "white",
+      "pet": "fish",
+      "house": 2
+    },
+    "Grace": {
+      "color": "purple",
+      "pet": "rabbit",
+      "house": 3
+    }
+  },
+  "test-3x3-032": {
+    "House1": {
+      "color": "green",
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "yellow",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-033": {
+    "House1": {
+      "color": "green",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "red",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "blue",
+      "pet": "fish"
+    }
+  },
+  "test-3x3-034": {
+    "Carol": {
+      "color": "blue",
+      "pet": "turtle",
+      "house": 1
+    },
+    "Bob": {
+      "color": "red",
+      "pet": "cat",
+      "house": 2
+    },
+    "Alice": {
+      "color": "green",
+      "pet": "fish",
+      "house": 3
+    }
+  },
+  "test-3x3-035": {
+    "Niaj": {
+      "color": "red",
+      "pet": "cat",
+      "house": 1
+    },
+    "Bob": {
+      "color": "blue",
+      "pet": "dog",
+      "house": 2
+    },
+    "Heidi": {
+      "color": "purple",
+      "pet": "turtle",
+      "house": 3
+    }
+  },
+  "test-3x3-036": {
+    "House1": {
+      "color": "purple",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "white",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "dog"
+    }
+  },
+  "test-3x3-037": {
+    "House1": {
+      "color": "purple",
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "turtle"
+    },
+    "House3": {
+      "color": "yellow",
+      "pet": "cat"
+    }
+  },
+  "test-3x3-038": {
+    "House1": {
+      "color": "blue",
+      "pet": "hamster"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "bird"
+    }
+  },
+  "test-3x3-039": {
+    "House1": {
+      "color": "yellow",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "dog"
+    },
+    "House3": {
+      "color": "white",
+      "pet": "hamster"
+    }
+  },
+  "test-3x3-040": {
+    "Carol": {
+      "color": "white",
+      "pet": "hamster",
+      "house": 1
+    },
+    "Mallory": {
+      "color": "orange",
+      "pet": "fish",
+      "house": 2
+    },
+    "Bob": {
+      "color": "yellow",
+      "pet": "rabbit",
+      "house": 3
+    }
+  },
+  "test-3x3-041": {
+    "House1": {
+      "color": "yellow",
+      "pet": "fish"
+    },
+    "House2": {
+      "color": "blue",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "dog"
+    }
+  },
+  "test-3x3-042": {
+    "House1": {
+      "color": "green",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "hamster"
+    }
+  },
+  "test-3x3-043": {
+    "House1": {
+      "color": "orange",
+      "pet": "hamster"
+    },
+    "House2": {
+      "color": "yellow",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "cat"
+    }
+  },
+  "test-3x3-044": {
+    "Eve": {
+      "color": "yellow",
+      "pet": "hamster",
+      "house": 1
+    },
+    "Carol": {
+      "color": "purple",
+      "pet": "turtle",
+      "house": 2
+    },
+    "Bob": {
+      "color": "green",
+      "pet": "dog",
+      "house": 3
+    }
+  },
+  "test-3x3-045": {
+    "Eve": {
+      "color": "green",
+      "pet": "rabbit",
+      "house": 1
+    },
+    "Bob": {
+      "color": "white",
+      "pet": "fish",
+      "house": 2
+    },
+    "Alice": {
+      "color": "purple",
+      "pet": "turtle",
+      "house": 3
+    }
+  },
+  "test-3x3-046": {
+    "House1": {
+      "color": "orange",
+      "pet": "turtle"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "white",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-047": {
+    "House1": {
+      "color": "red",
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "blue",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-048": {
+    "Judy": {
+      "color": "white",
+      "pet": "bird",
+      "house": 1
+    },
+    "Bob": {
+      "color": "green",
+      "pet": "dog",
+      "house": 2
+    },
+    "Grace": {
+      "color": "purple",
+      "pet": "turtle",
+      "house": 3
+    }
+  },
+  "test-3x3-049": {
+    "Carol": {
+      "color": "green",
+      "pet": "bird",
+      "house": 1
+    },
+    "Bob": {
+      "color": "orange",
+      "pet": "fish",
+      "house": 2
+    },
+    "Alice": {
+      "color": "blue",
+      "pet": "hamster",
+      "house": 3
+    }
+  },
+  "test-3x3-050": {
+    "House1": {
+      "color": "red",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "blue",
+      "pet": "dog"
+    }
+  },
+  "test-3x3-051": {
+    "Frank": {
+      "color": "yellow",
+      "pet": "bird",
+      "house": 1
+    },
+    "Carol": {
+      "color": "white",
+      "pet": "cat",
+      "house": 2
+    },
+    "Bob": {
+      "color": "purple",
+      "pet": "fish",
+      "house": 3
+    }
+  },
+  "test-3x3-052": {
+    "Niaj": {
+      "color": "green",
+      "pet": "bird",
+      "house": 1
+    },
+    "Judy": {
+      "color": "orange",
+      "pet": "rabbit",
+      "house": 2
+    },
+    "Carol": {
+      "color": "purple",
+      "pet": "fish",
+      "house": 3
+    }
+  },
+  "test-3x3-053": {
+    "House1": {
+      "color": "white",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "blue",
+      "pet": "hamster"
+    }
+  },
+  "test-3x3-054": {
+    "House1": {
+      "color": "yellow",
+      "pet": "cat"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "white",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-055": {
+    "Carol": {
+      "color": "blue",
+      "pet": "bird",
+      "house": 1
+    },
+    "Bob": {
+      "color": "white",
+      "pet": "cat",
+      "house": 2
+    },
+    "Grace": {
+      "color": "purple",
+      "pet": "rabbit",
+      "house": 3
+    }
+  },
+  "test-3x3-056": {
+    "House1": {
+      "color": "orange",
+      "pet": "fish"
+    },
+    "House2": {
+      "color": "white",
+      "pet": "hamster"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "bird"
+    }
+  },
+  "test-3x3-057": {
+    "Ivan": {
+      "color": "purple",
+      "pet": "cat",
+      "house": 1
+    },
+    "Frank": {
+      "color": "yellow",
+      "pet": "hamster",
+      "house": 2
+    },
+    "Heidi": {
+      "color": "blue",
+      "pet": "fish",
+      "house": 3
+    }
+  },
+  "test-3x3-058": {
+    "Eve": {
+      "color": "yellow",
+      "pet": "rabbit",
+      "house": 1
+    },
+    "Frank": {
+      "color": "orange",
+      "pet": "hamster",
+      "house": 2
+    },
+    "Bob": {
+      "color": "blue",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-059": {
+    "Eve": {
+      "color": "blue",
+      "pet": "dog",
+      "house": 1
+    },
+    "David": {
+      "color": "white",
+      "pet": "fish",
+      "house": 2
+    },
+    "Mallory": {
+      "color": "red",
+      "pet": "turtle",
+      "house": 3
+    }
+  },
+  "test-3x3-060": {
+    "House1": {
+      "color": "orange",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "green",
+      "pet": "turtle"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "bird"
+    }
+  },
+  "test-3x3-061": {
+    "House1": {
+      "color": "blue",
+      "pet": "turtle"
+    },
+    "House2": {
+      "color": "red",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "bird"
+    }
+  },
+  "test-3x3-062": {
+    "House1": {
+      "color": "orange",
+      "pet": "hamster"
+    },
+    "House2": {
+      "color": "green",
+      "pet": "dog"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "fish"
+    }
+  },
+  "test-3x3-063": {
+    "House1": {
+      "color": "blue",
+      "pet": "hamster"
+    },
+    "House2": {
+      "color": "yellow",
+      "pet": "turtle"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-064": {
+    "House1": {
+      "color": "red",
+      "pet": "fish"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "hamster"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "dog"
+    }
+  },
+  "test-3x3-065": {
+    "House1": {
+      "color": "purple",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "yellow",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "hamster"
+    }
+  },
+  "test-3x3-066": {
+    "House1": {
+      "color": "green",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "dog"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "hamster"
+    }
+  },
+  "test-3x3-067": {
+    "Heidi": {
+      "color": "green",
+      "pet": "hamster",
+      "house": 1
+    },
+    "Frank": {
+      "color": "blue",
+      "pet": "dog",
+      "house": 2
+    },
+    "Bob": {
+      "color": "orange",
+      "pet": "fish",
+      "house": 3
+    }
+  },
+  "test-3x3-068": {
+    "Ivan": {
+      "color": "red",
+      "pet": "turtle",
+      "house": 1
+    },
+    "Bob": {
+      "color": "white",
+      "pet": "dog",
+      "house": 2
+    },
+    "Alice": {
+      "color": "orange",
+      "pet": "hamster",
+      "house": 3
+    }
+  },
+  "test-3x3-069": {
+    "Eve": {
+      "color": "red",
+      "pet": "fish",
+      "house": 1
+    },
+    "Frank": {
+      "color": "blue",
+      "pet": "hamster",
+      "house": 2
+    },
+    "Grace": {
+      "color": "yellow",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-070": {
+    "Eve": {
+      "color": "purple",
+      "pet": "bird",
+      "house": 1
+    },
+    "Bob": {
+      "color": "white",
+      "pet": "dog",
+      "house": 2
+    },
+    "Mallory": {
+      "color": "red",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-071": {
+    "House1": {
+      "color": "orange",
+      "pet": "turtle"
+    },
+    "House2": {
+      "color": "yellow",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "bird"
+    }
+  },
+  "test-3x3-072": {
+    "House1": {
+      "color": "yellow",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "white",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "cat"
+    }
+  },
+  "test-3x3-073": {
+    "House1": {
+      "color": "green",
+      "pet": "fish"
+    },
+    "House2": {
+      "color": "blue",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-074": {
+    "House1": {
+      "color": "orange",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "blue",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "cat"
+    }
+  },
+  "test-3x3-075": {
+    "Frank": {
+      "color": "red",
+      "pet": "cat",
+      "house": 1
+    },
+    "Grace": {
+      "color": "white",
+      "pet": "rabbit",
+      "house": 2
+    },
+    "Bob": {
+      "color": "blue",
+      "pet": "fish",
+      "house": 3
+    }
+  },
+  "test-3x3-076": {
+    "Eve": {
+      "color": "red",
+      "pet": "dog",
+      "house": 1
+    },
+    "Frank": {
+      "color": "orange",
+      "pet": "bird",
+      "house": 2
+    },
+    "Bob": {
+      "color": "white",
+      "pet": "turtle",
+      "house": 3
+    }
+  },
+  "test-3x3-077": {
+    "Judy": {
+      "color": "red",
+      "pet": "bird",
+      "house": 1
+    },
+    "Eve": {
+      "color": "purple",
+      "pet": "turtle",
+      "house": 2
+    },
+    "Bob": {
+      "color": "green",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-078": {
+    "Ivan": {
+      "color": "orange",
+      "pet": "hamster",
+      "house": 1
+    },
+    "Carol": {
+      "color": "green",
+      "pet": "fish",
+      "house": 2
+    },
+    "Heidi": {
+      "color": "white",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-079": {
+    "House1": {
+      "color": "orange",
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "yellow",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-080": {
+    "House1": {
+      "color": "white",
+      "pet": "turtle"
+    },
+    "House2": {
+      "color": "green",
+      "pet": "dog"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "fish"
+    }
+  },
+  "test-3x3-081": {
+    "Mallory": {
+      "color": "yellow",
+      "pet": "hamster",
+      "house": 1
+    },
+    "Niaj": {
+      "color": "red",
+      "pet": "fish",
+      "house": 2
+    },
+    "Grace": {
+      "color": "orange",
+      "pet": "bird",
+      "house": 3
+    }
+  },
+  "test-3x3-082": {
+    "House1": {
+      "color": "green",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "blue",
+      "pet": "bird"
+    },
+    "House3": {
+      "color": "red",
+      "pet": "turtle"
+    }
+  },
+  "test-3x3-083": {
+    "House1": {
+      "color": "yellow",
+      "pet": "dog"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-084": {
+    "House1": {
+      "color": "white",
+      "pet": "rabbit"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "hamster"
+    }
+  },
+  "test-3x3-085": {
+    "House1": {
+      "color": "orange",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "white",
+      "pet": "fish"
+    }
+  },
+  "test-3x3-086": {
+    "Ivan": {
+      "color": "purple",
+      "pet": "bird",
+      "house": 1
+    },
+    "Frank": {
+      "color": "orange",
+      "pet": "turtle",
+      "house": 2
+    },
+    "Heidi": {
+      "color": "blue",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-087": {
+    "House1": {
+      "color": "red",
+      "pet": "hamster"
+    },
+    "House2": {
+      "color": "yellow",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "blue",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-088": {
+    "House1": {
+      "color": "orange",
+      "pet": "bird"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "hamster"
+    }
+  },
+  "test-3x3-089": {
+    "House1": {
+      "color": "green",
+      "pet": "fish"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "yellow",
+      "pet": "dog"
+    }
+  },
+  "test-3x3-090": {
+    "Eve": {
+      "color": "white",
+      "pet": "dog",
+      "house": 1
+    },
+    "Carol": {
+      "color": "orange",
+      "pet": "cat",
+      "house": 2
+    },
+    "Bob": {
+      "color": "purple",
+      "pet": "bird",
+      "house": 3
+    }
+  },
+  "test-3x3-091": {
+    "House1": {
+      "color": "white",
+      "pet": "cat"
+    },
+    "House2": {
+      "color": "red",
+      "pet": "hamster"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "dog"
+    }
+  },
+  "test-3x3-092": {
+    "House1": {
+      "color": "yellow",
+      "pet": "cat"
+    },
+    "House2": {
+      "color": "white",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "green",
+      "pet": "fish"
+    }
+  },
+  "test-3x3-093": {
+    "Ivan": {
+      "color": "white",
+      "pet": "turtle",
+      "house": 1
+    },
+    "Eve": {
+      "color": "green",
+      "pet": "hamster",
+      "house": 2
+    },
+    "Alice": {
+      "color": "purple",
+      "pet": "bird",
+      "house": 3
+    }
+  },
+  "test-3x3-094": {
+    "Niaj": {
+      "color": "white",
+      "pet": "fish",
+      "house": 1
+    },
+    "Carol": {
+      "color": "red",
+      "pet": "rabbit",
+      "house": 2
+    },
+    "Frank": {
+      "color": "green",
+      "pet": "cat",
+      "house": 3
+    }
+  },
+  "test-3x3-095": {
+    "Judy": {
+      "color": "white",
+      "pet": "fish",
+      "house": 1
+    },
+    "Niaj": {
+      "color": "purple",
+      "pet": "cat",
+      "house": 2
+    },
+    "Grace": {
+      "color": "red",
+      "pet": "bird",
+      "house": 3
+    }
+  },
+  "test-3x3-096": {
+    "Niaj": {
+      "color": "blue",
+      "pet": "dog",
+      "house": 1
+    },
+    "Grace": {
+      "color": "yellow",
+      "pet": "hamster",
+      "house": 2
+    },
+    "Heidi": {
+      "color": "purple",
+      "pet": "fish",
+      "house": 3
+    }
+  },
+  "test-3x3-097": {
+    "House1": {
+      "color": "green",
+      "pet": "turtle"
+    },
+    "House2": {
+      "color": "yellow",
+      "pet": "fish"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "rabbit"
+    }
+  },
+  "test-3x3-098": {
+    "House1": {
+      "color": "red",
+      "pet": "hamster"
+    },
+    "House2": {
+      "color": "orange",
+      "pet": "cat"
+    },
+    "House3": {
+      "color": "purple",
+      "pet": "bird"
+    }
+  },
+  "test-3x3-099": {
+    "Judy": {
+      "color": "blue",
+      "pet": "rabbit",
+      "house": 1
+    },
+    "David": {
+      "color": "red",
+      "pet": "dog",
+      "house": 2
+    },
+    "Heidi": {
+      "color": "yellow",
+      "pet": "turtle",
+      "house": 3
+    }
+  },
+  "test-3x3-100": {
+    "House1": {
+      "color": "green",
+      "pet": "fish"
+    },
+    "House2": {
+      "color": "purple",
+      "pet": "rabbit"
+    },
+    "House3": {
+      "color": "orange",
+      "pet": "dog"
     }
   }
-}
+ }
