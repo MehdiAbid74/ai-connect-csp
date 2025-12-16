@@ -2,7 +2,7 @@
 """
 AI Connect 2025 - CSP Solver Runner
 ===================================
-Script to run the solver on test puzzles and generate results.json
+Script to run the solver on test puzzles and generate results.csv
 
 Usage:
     python run.py                           # Run on ZebraLogicBench test set
@@ -11,21 +11,94 @@ Usage:
     python run.py --input data.parquet      # Run on Parquet file
     python run.py --max 100                 # Limit number of puzzles
     python run.py --trace                   # Enable trace generation
-    python run.py --output results.json     # Specify output file
+    python run.py --output results.csv      # Specify output file
 
 For final submission:
-    python run.py --input held_out_test.json --output results.json
+    python run.py --input held_out_test.json --output results.csv
 """
 
 import argparse
+import csv
 import json
 import sys
 import time
 from typing import Dict, List, Optional, Any
 
 from data_loader import load_puzzles, CSPPuzzle
-from solver import ZebraPuzzleSolver, SolverStats
+from solver_optimized import OptimizedZebraPuzzleSolver as ZebraPuzzleSolver, SolverStats
 from trace_generator import TraceGenerator
+
+
+def format_as_grid_solution(solution: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Convert the solution dictionary to the grid format:
+    {"header": ["House", "Name", "Color", "Pet"], "rows": [["1", "Bob", "orange", "turtle"], ...]}
+    """
+    first_key = list(solution.keys())[0]
+    first_value = solution[first_key]
+    
+    if first_key.startswith('House'):
+        # Format: House1, House2, etc. with attributes (no name)
+        all_attrs = set()
+        for house_key, attrs in solution.items():
+            for key in attrs.keys():
+                all_attrs.add(key)
+        
+        attr_list = sorted(all_attrs)
+        header = ['House'] + [attr.capitalize() for attr in attr_list]
+        
+        rows_data = []
+        for house_key, attrs in solution.items():
+            house_num = int(house_key.replace('House', ''))
+            row = [str(house_num)]
+            for attr in attr_list:
+                row.append(str(attrs.get(attr, '')))
+            rows_data.append((house_num, row))
+        
+        rows_data.sort(key=lambda x: x[0])
+        rows = [r[1] for r in rows_data]
+        
+    elif 'house' in first_value:
+        # Format: Name as key with house number in values
+        all_attrs = set()
+        for name, attrs in solution.items():
+            for key in attrs.keys():
+                if key != 'house':
+                    all_attrs.add(key)
+        
+        attr_list = sorted(all_attrs)
+        header = ['House', 'Name'] + [attr.capitalize() for attr in attr_list]
+        
+        rows_data = []
+        for name, attrs in solution.items():
+            house_num = attrs.get('house', 0)
+            row = [str(house_num), name]
+            for attr in attr_list:
+                row.append(str(attrs.get(attr, '')))
+            rows_data.append((house_num, row))
+        
+        rows_data.sort(key=lambda x: x[0])
+        rows = [r[1] for r in rows_data]
+    else:
+        # Fallback generic format
+        all_attrs = set()
+        for key, attrs in solution.items():
+            if isinstance(attrs, dict):
+                for attr_key in attrs.keys():
+                    all_attrs.add(attr_key)
+        
+        attr_list = sorted(all_attrs)
+        header = ['Entity'] + [attr.capitalize() for attr in attr_list]
+        
+        rows = []
+        for entity, attrs in solution.items():
+            row = [str(entity)]
+            if isinstance(attrs, dict):
+                for attr in attr_list:
+                    row.append(str(attrs.get(attr, '')))
+            rows.append(row)
+    
+    return {"header": header, "rows": rows}
 
 
 def solve_puzzles(puzzles: List[CSPPuzzle], 
@@ -149,8 +222,8 @@ For final submission:
     parser.add_argument(
         '--output', '-o',
         type=str,
-        default='results.json',
-        help='Output file for results (default: results.json)'
+        default='results.csv',
+        help='Output file for results (default: results.csv)'
     )
     parser.add_argument(
         '--max', '-m',
@@ -249,12 +322,45 @@ For final submission:
     print("-" * 60)
     print("\nSaving results...")
     
-    with open(args.output, 'w', encoding='utf-8') as f:
-        json.dump(output['results'], f, indent=2, ensure_ascii=False)
-    print(f"  Results saved to: {args.output}")
+    # Build CSV data with id, grid_solution, steps
+    csv_rows = []
+    stats_by_id = {s['puzzle_id']: s for s in output['stats']}
+    
+    for puzzle_id, solution in output['results'].items():
+        stats_entry = stats_by_id.get(puzzle_id, {})
+        steps = stats_entry.get('steps', 0)
+        
+        # Convert solution to grid format
+        if 'error' in solution:
+            grid_solution = {"error": solution['error']}
+        else:
+            grid_solution = format_as_grid_solution(solution)
+        
+        csv_rows.append({
+            'id': puzzle_id,
+            'grid_solution': json.dumps(grid_solution),
+            'steps': steps
+        })
+    
+    # Sort by id for consistent output
+    csv_rows.sort(key=lambda x: x['id'])
+    
+    # Determine output filename (ensure .csv extension)
+    output_file = args.output
+    if output_file.endswith('.json'):
+        output_file = output_file.replace('.json', '.csv')
+    elif not output_file.endswith('.csv'):
+        output_file += '.csv'
+    
+    # Write CSV
+    with open(output_file, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=['id', 'grid_solution', 'steps'])
+        writer.writeheader()
+        writer.writerows(csv_rows)
+    print(f"  Results saved to: {output_file}")
     
     # Save detailed stats
-    stats_file = args.output.replace('.json', '_stats.json')
+    stats_file = output_file.replace('.csv', '_stats.json')
     with open(stats_file, 'w', encoding='utf-8') as f:
         json.dump({
             'summary': output['summary'],

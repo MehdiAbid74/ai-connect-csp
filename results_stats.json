@@ -3,9 +3,9 @@
     "total_puzzles": 100,
     "solved": 100,
     "accuracy": 100.0,
-    "avg_steps": 8.24,
-    "avg_time_ms": 0.9455418586730957,
-    "total_time_seconds": 0.22353243827819824
+    "avg_steps": 8.2,
+    "avg_time_ms": 0.30318498611450195,
+    "total_time_seconds": 0.06717514991760254
   },
   "details": [
     {
@@ -13,700 +13,700 @@
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0012013912200927734
+      "time_seconds": 0.0004031658172607422
     },
     {
       "puzzle_id": "test-3x3-002",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00037288665771484375
+      "time_seconds": 0.0003364086151123047
     },
     {
       "puzzle_id": "test-3x3-003",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0003457069396972656
+      "time_seconds": 0.0002722740173339844
     },
     {
       "puzzle_id": "test-3x3-004",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00033211708068847656
+      "time_seconds": 0.00026535987854003906
     },
     {
       "puzzle_id": "test-3x3-005",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005927085876464844
+      "time_seconds": 0.0002377033233642578
     },
     {
       "puzzle_id": "test-3x3-006",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005269050598144531
+      "time_seconds": 0.00021910667419433594
     },
     {
       "puzzle_id": "test-3x3-007",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0008225440979003906
+      "time_seconds": 0.0003292560577392578
     },
     {
       "puzzle_id": "test-3x3-008",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0006291866302490234
+      "time_seconds": 0.0005304813385009766
     },
     {
       "puzzle_id": "test-3x3-009",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.00046443939208984375
+      "backtracks": 0,
+      "time_seconds": 0.0002961158752441406
     },
     {
       "puzzle_id": "test-3x3-010",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0008754730224609375
+      "time_seconds": 0.00032711029052734375
     },
     {
       "puzzle_id": "test-3x3-011",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0006527900695800781
+      "time_seconds": 0.0001850128173828125
     },
     {
       "puzzle_id": "test-3x3-012",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005156993865966797
+      "time_seconds": 0.0004048347473144531
     },
     {
       "puzzle_id": "test-3x3-013",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0008862018585205078
+      "time_seconds": 0.0004112720489501953
     },
     {
       "puzzle_id": "test-3x3-014",
       "solved": true,
-      "steps": 8,
-      "backtracks": 4,
-      "time_seconds": 0.0008323192596435547
+      "steps": 7,
+      "backtracks": 0,
+      "time_seconds": 0.00029277801513671875
     },
     {
       "puzzle_id": "test-3x3-015",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0007479190826416016
+      "time_seconds": 0.00021791458129882812
     },
     {
       "puzzle_id": "test-3x3-016",
       "solved": true,
       "steps": 10,
-      "backtracks": 1,
-      "time_seconds": 0.001226186752319336
+      "backtracks": 0,
+      "time_seconds": 0.0004744529724121094
     },
     {
       "puzzle_id": "test-3x3-017",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005328655242919922
+      "time_seconds": 0.00021982192993164062
     },
     {
       "puzzle_id": "test-3x3-018",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005421638488769531
+      "time_seconds": 0.000217437744140625
     },
     {
       "puzzle_id": "test-3x3-019",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0011951923370361328
+      "time_seconds": 0.000217437744140625
     },
     {
       "puzzle_id": "test-3x3-020",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0010712146759033203
+      "backtracks": 0,
+      "time_seconds": 0.00021576881408691406
     },
     {
       "puzzle_id": "test-3x3-021",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0009317398071289062
+      "backtracks": 0,
+      "time_seconds": 0.00021338462829589844
     },
     {
       "puzzle_id": "test-3x3-022",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0007164478302001953
+      "time_seconds": 0.0002377033233642578
     },
     {
       "puzzle_id": "test-3x3-023",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0011785030364990234
+      "time_seconds": 0.000797271728515625
     },
     {
       "puzzle_id": "test-3x3-024",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0004870891571044922
+      "time_seconds": 0.000217437744140625
     },
     {
       "puzzle_id": "test-3x3-025",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0010380744934082031
+      "time_seconds": 0.0003764629364013672
     },
     {
       "puzzle_id": "test-3x3-026",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00067901611328125
+      "time_seconds": 0.00025081634521484375
     },
     {
       "puzzle_id": "test-3x3-027",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0011806488037109375
+      "time_seconds": 0.0003409385681152344
     },
     {
       "puzzle_id": "test-3x3-028",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0010941028594970703
+      "time_seconds": 0.000308990478515625
     },
     {
       "puzzle_id": "test-3x3-029",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005002021789550781
+      "time_seconds": 0.0002086162567138672
     },
     {
       "puzzle_id": "test-3x3-030",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0009813308715820312
+      "backtracks": 0,
+      "time_seconds": 0.00019311904907226562
     },
     {
       "puzzle_id": "test-3x3-031",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0013735294342041016
+      "time_seconds": 0.0003046989440917969
     },
     {
       "puzzle_id": "test-3x3-032",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0009212493896484375
+      "backtracks": 0,
+      "time_seconds": 0.000217437744140625
     },
     {
       "puzzle_id": "test-3x3-033",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0006926059722900391
+      "backtracks": 0,
+      "time_seconds": 0.0004215240478515625
     },
     {
       "puzzle_id": "test-3x3-034",
       "solved": true,
-      "steps": 11,
-      "backtracks": 4,
-      "time_seconds": 0.0019736289978027344
+      "steps": 10,
+      "backtracks": 0,
+      "time_seconds": 0.0005428791046142578
     },
     {
       "puzzle_id": "test-3x3-035",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0014286041259765625
+      "time_seconds": 0.0003294944763183594
     },
     {
       "puzzle_id": "test-3x3-036",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0010619163513183594
+      "time_seconds": 0.00021839141845703125
     },
     {
       "puzzle_id": "test-3x3-037",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0006477832794189453
+      "time_seconds": 0.00021576881408691406
     },
     {
       "puzzle_id": "test-3x3-038",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0009024143218994141
+      "time_seconds": 0.00020885467529296875
     },
     {
       "puzzle_id": "test-3x3-039",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005800724029541016
+      "time_seconds": 0.00021576881408691406
     },
     {
       "puzzle_id": "test-3x3-040",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.001986265182495117
+      "time_seconds": 0.00032973289489746094
     },
     {
       "puzzle_id": "test-3x3-041",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0015285015106201172
+      "backtracks": 0,
+      "time_seconds": 0.0002269744873046875
     },
     {
       "puzzle_id": "test-3x3-042",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0013935565948486328
+      "time_seconds": 0.0002567768096923828
     },
     {
       "puzzle_id": "test-3x3-043",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0007004737854003906
+      "time_seconds": 0.0003058910369873047
     },
     {
       "puzzle_id": "test-3x3-044",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0018949508666992188
+      "time_seconds": 0.00046563148498535156
     },
     {
       "puzzle_id": "test-3x3-045",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.001985788345336914
+      "time_seconds": 0.0002987384796142578
     },
     {
       "puzzle_id": "test-3x3-046",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0009493827819824219
+      "backtracks": 0,
+      "time_seconds": 0.00020956993103027344
     },
     {
       "puzzle_id": "test-3x3-047",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0026433467864990234
+      "time_seconds": 0.0001876354217529297
     },
     {
       "puzzle_id": "test-3x3-048",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0017859935760498047
+      "time_seconds": 0.0002949237823486328
     },
     {
       "puzzle_id": "test-3x3-049",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.002058744430541992
+      "time_seconds": 0.0004916191101074219
     },
     {
       "puzzle_id": "test-3x3-050",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0007867813110351562
+      "time_seconds": 0.00028777122497558594
     },
     {
       "puzzle_id": "test-3x3-051",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.002293825149536133
+      "time_seconds": 0.0003457069396972656
     },
     {
       "puzzle_id": "test-3x3-052",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0019016265869140625
+      "time_seconds": 0.0003077983856201172
     },
     {
       "puzzle_id": "test-3x3-053",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0009293556213378906
+      "time_seconds": 0.00020575523376464844
     },
     {
       "puzzle_id": "test-3x3-054",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0008699893951416016
+      "time_seconds": 0.0002384185791015625
     },
     {
       "puzzle_id": "test-3x3-055",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0018014907836914062
+      "time_seconds": 0.0004684925079345703
     },
     {
       "puzzle_id": "test-3x3-056",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0011630058288574219
+      "backtracks": 0,
+      "time_seconds": 0.0003070831298828125
     },
     {
       "puzzle_id": "test-3x3-057",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.010808229446411133
+      "time_seconds": 0.0004901885986328125
     },
     {
       "puzzle_id": "test-3x3-058",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0016131401062011719
+      "time_seconds": 0.000423431396484375
     },
     {
       "puzzle_id": "test-3x3-059",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.001636505126953125
+      "time_seconds": 0.00030875205993652344
     },
     {
       "puzzle_id": "test-3x3-060",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0007503032684326172
+      "time_seconds": 0.0001983642578125
     },
     {
       "puzzle_id": "test-3x3-061",
       "solved": true,
-      "steps": 8,
-      "backtracks": 3,
-      "time_seconds": 0.0015244483947753906
+      "steps": 7,
+      "backtracks": 0,
+      "time_seconds": 0.000186920166015625
     },
     {
       "puzzle_id": "test-3x3-062",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00035858154296875
+      "time_seconds": 0.0001900196075439453
     },
     {
       "puzzle_id": "test-3x3-063",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0003426074981689453
+      "time_seconds": 0.0002970695495605469
     },
     {
       "puzzle_id": "test-3x3-064",
       "solved": true,
-      "steps": 8,
-      "backtracks": 3,
-      "time_seconds": 0.0005033016204833984
+      "steps": 7,
+      "backtracks": 0,
+      "time_seconds": 0.00020623207092285156
     },
     {
       "puzzle_id": "test-3x3-065",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0004277229309082031
+      "time_seconds": 0.000202178955078125
     },
     {
       "puzzle_id": "test-3x3-066",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.00037479400634765625
+      "backtracks": 0,
+      "time_seconds": 0.000278472900390625
     },
     {
       "puzzle_id": "test-3x3-067",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0006299018859863281
+      "time_seconds": 0.00031638145446777344
     },
     {
       "puzzle_id": "test-3x3-068",
       "solved": true,
       "steps": 10,
-      "backtracks": 1,
-      "time_seconds": 0.0008974075317382812
+      "backtracks": 0,
+      "time_seconds": 0.0003323554992675781
     },
     {
       "puzzle_id": "test-3x3-069",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0006234645843505859
+      "time_seconds": 0.0003216266632080078
     },
     {
       "puzzle_id": "test-3x3-070",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0012133121490478516
+      "time_seconds": 0.00032401084899902344
     },
     {
       "puzzle_id": "test-3x3-071",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005130767822265625
+      "time_seconds": 0.000209808349609375
     },
     {
       "puzzle_id": "test-3x3-072",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0005223751068115234
+      "time_seconds": 0.0002238750457763672
     },
     {
       "puzzle_id": "test-3x3-073",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00042247772216796875
+      "time_seconds": 0.0002105236053466797
     },
     {
       "puzzle_id": "test-3x3-074",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0002837181091308594
+      "time_seconds": 0.0004467964172363281
     },
     {
       "puzzle_id": "test-3x3-075",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.000553131103515625
+      "time_seconds": 0.00031113624572753906
     },
     {
       "puzzle_id": "test-3x3-076",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0003771781921386719
+      "time_seconds": 0.0003485679626464844
     },
     {
       "puzzle_id": "test-3x3-077",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0007617473602294922
+      "time_seconds": 0.0003161430358886719
     },
     {
       "puzzle_id": "test-3x3-078",
       "solved": true,
       "steps": 10,
-      "backtracks": 1,
-      "time_seconds": 0.0006899833679199219
+      "backtracks": 0,
+      "time_seconds": 0.0003287792205810547
     },
     {
       "puzzle_id": "test-3x3-079",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00024080276489257812
+      "time_seconds": 0.0002162456512451172
     },
     {
       "puzzle_id": "test-3x3-080",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00020384788513183594
+      "time_seconds": 0.0002155303955078125
     },
     {
       "puzzle_id": "test-3x3-081",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.00037479400634765625
+      "time_seconds": 0.0003063678741455078
     },
     {
       "puzzle_id": "test-3x3-082",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0003039836883544922
+      "time_seconds": 0.0002124309539794922
     },
     {
       "puzzle_id": "test-3x3-083",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.00034928321838378906
+      "backtracks": 0,
+      "time_seconds": 0.000240325927734375
     },
     {
       "puzzle_id": "test-3x3-084",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.00035858154296875
+      "backtracks": 0,
+      "time_seconds": 0.00019121170043945312
     },
     {
       "puzzle_id": "test-3x3-085",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00033211708068847656
+      "time_seconds": 0.00024008750915527344
     },
     {
       "puzzle_id": "test-3x3-086",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.00063323974609375
+      "time_seconds": 0.0005519390106201172
     },
     {
       "puzzle_id": "test-3x3-087",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0002338886260986328
+      "time_seconds": 0.0001804828643798828
     },
     {
       "puzzle_id": "test-3x3-088",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00033974647521972656
+      "time_seconds": 0.000225067138671875
     },
     {
       "puzzle_id": "test-3x3-089",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00020694732666015625
+      "time_seconds": 0.0002551078796386719
     },
     {
       "puzzle_id": "test-3x3-090",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0003840923309326172
+      "time_seconds": 0.00030922889709472656
     },
     {
       "puzzle_id": "test-3x3-091",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.00047898292541503906
+      "time_seconds": 0.0002162456512451172
     },
     {
       "puzzle_id": "test-3x3-092",
       "solved": true,
       "steps": 7,
-      "backtracks": 1,
-      "time_seconds": 0.0003638267517089844
+      "backtracks": 0,
+      "time_seconds": 0.0004143714904785156
     },
     {
       "puzzle_id": "test-3x3-093",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0006041526794433594
+      "time_seconds": 0.000362396240234375
     },
     {
       "puzzle_id": "test-3x3-094",
       "solved": true,
       "steps": 10,
-      "backtracks": 1,
-      "time_seconds": 0.0006697177886962891
+      "backtracks": 0,
+      "time_seconds": 0.0004591941833496094
     },
     {
       "puzzle_id": "test-3x3-095",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0006570816040039062
+      "time_seconds": 0.0006792545318603516
     },
     {
       "puzzle_id": "test-3x3-096",
       "solved": true,
       "steps": 10,
-      "backtracks": 1,
-      "time_seconds": 0.0007314682006835938
+      "backtracks": 0,
+      "time_seconds": 0.0003800392150878906
     },
     {
       "puzzle_id": "test-3x3-097",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0006055831909179688
+      "time_seconds": 0.0001926422119140625
     },
     {
       "puzzle_id": "test-3x3-098",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0003466606140136719
+      "time_seconds": 0.00019979476928710938
     },
     {
       "puzzle_id": "test-3x3-099",
       "solved": true,
       "steps": 10,
       "backtracks": 0,
-      "time_seconds": 0.0006017684936523438
+      "time_seconds": 0.0004420280456542969
     },
     {
       "puzzle_id": "test-3x3-100",
       "solved": true,
       "steps": 7,
       "backtracks": 0,
-      "time_seconds": 0.0002982616424560547
+      "time_seconds": 0.00023508071899414062
     }
   ]
 }

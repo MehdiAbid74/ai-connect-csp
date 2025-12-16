@@ -73,6 +73,7 @@ class CSPSolver:
         
         # Solver settings
         self.use_mrv = True
+        self.use_lcv = True  # Least Constraining Value heuristic
         self.use_forward_checking = True
         self.use_arc_consistency = True
         
@@ -157,23 +158,52 @@ class CSPSolver:
     
     def _order_domain_values(self, var_name: str, assignment: Dict[str, int]) -> List[int]:
         """
-        Order domain values (can implement LCV - Least Constraining Value).
+        Order domain values using LCV (Least Constraining Value) heuristic.
+        Values that rule out fewer choices for neighbors are tried first.
         """
-        return list(self.variables[var_name].domain)
+        if not self.use_lcv:
+            return list(self.variables[var_name].domain)
+        
+        domain = list(self.variables[var_name].domain)
+        if len(domain) <= 1:
+            return domain
+        
+        def count_conflicts(value):
+            """Count how many values this choice eliminates from neighbors."""
+            conflicts = 0
+            for other_var, constraint in self.binary_constraints[var_name]:
+                if other_var not in assignment:
+                    for other_val in self.variables[other_var].domain:
+                        if var_name == constraint.variables[0]:
+                            if not constraint.check_func(value, other_val):
+                                conflicts += 1
+                        else:
+                            if not constraint.check_func(other_val, value):
+                                conflicts += 1
+            return conflicts
+        
+        return sorted(domain, key=count_conflicts)
     
     def _is_consistent(self, var_name: str, value: int, assignment: Dict[str, int]) -> bool:
         """
         Check if assigning value to var_name is consistent with current assignment.
+        Optimized to only check relevant constraints.
         """
-        test_assignment = assignment.copy()
-        test_assignment[var_name] = value
+        # Check unary constraints first (fastest)
+        for constraint in self.unary_constraints.get(var_name, []):
+            if not constraint.check_func(value):
+                return False
         
-        for constraint in self.constraints:
-            # Check if all variables in constraint are assigned
-            if all(v in test_assignment for v in constraint.variables):
-                values = [test_assignment[v] for v in constraint.variables]
-                if not constraint.check_func(*values):
-                    return False
+        # Check binary constraints with already-assigned variables
+        for other_var, constraint in self.binary_constraints[var_name]:
+            if other_var in assignment:
+                other_val = assignment[other_var]
+                if var_name == constraint.variables[0]:
+                    if not constraint.check_func(value, other_val):
+                        return False
+                else:
+                    if not constraint.check_func(other_val, value):
+                        return False
         
         return True
     
@@ -214,16 +244,23 @@ class CSPSolver:
         """
         AC-3 algorithm for arc consistency.
         Returns False if any domain becomes empty.
+        Optimized with set-based queue for O(1) membership checking.
         """
+        # Use set for O(1) membership check to avoid duplicate arcs
+        queue_set = set()
         queue = deque()
         
         # Initialize queue with all arcs
         for var_name in self.variables:
             for other_var, _ in self.binary_constraints[var_name]:
-                queue.append((var_name, other_var))
+                arc = (var_name, other_var)
+                if arc not in queue_set:
+                    queue.append(arc)
+                    queue_set.add(arc)
         
         while queue:
             xi, xj = queue.popleft()
+            queue_set.discard((xi, xj))
             
             if self._revise(domains, xi, xj):
                 if not domains[xi]:
@@ -232,7 +269,10 @@ class CSPSolver:
                 # Add all arcs (xk, xi) where xk != xj
                 for xk, _ in self.binary_constraints[xi]:
                     if xk != xj:
-                        queue.append((xk, xi))
+                        arc = (xk, xi)
+                        if arc not in queue_set:
+                            queue.append(arc)
+                            queue_set.add(arc)
         
         return True
     
