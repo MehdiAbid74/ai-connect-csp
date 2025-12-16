@@ -96,28 +96,25 @@ All clue types present in the dataset, including positional, relational, and dis
 
 ---
 
-## 7. Results
+## 7. Results - Quantitative Performance
 
-### Quantitative Performance
-
-| Metric                     | Value   |
-| -------------------------- | ------- |
-| Validation Accuracy        | 98%     |
-| Average Search Steps       | 18.99   |
-| Average Runtime per Puzzle | 2.43 ms |
-
-The solver achieves a strong balance between correctness and efficiency, solving the vast majority of puzzles with relatively shallow search.
-
----
+| Metric                     | Value      |
+| -------------------------- | ---------: |
+| Puzzles Solved             | 78.30%     |
+| Average Search Steps       | 13.47      |
+| Average Runtime per Puzzle | 0.61 ms    |
+| Total Runtime              | 0.78 s     |
 
 ## 8. Discussion
 
-The results demonstrate that a carefully engineered symbolic CSP solver can perform competitively on large and diverse logic puzzle benchmarks. The combination of informed variable and value ordering, aggressive constraint propagation, and optimized backtracking significantly reduces search effort while maintaining generality across puzzle sizes.
+The evaluation results indicate a clear trade-off between accuracy and efficiency. While the solver does not solve all puzzles in the benchmark, it achieves a low average number of search steps and a very short runtime per puzzle. This suggests that the employed heuristics and propagation mechanisms are effective at pruning the search space and resolving easier and moderately constrained puzzles efficiently.
 
-Most remaining failures can be attributed to limitations in natural-language clue parsing rather than deficiencies in the CSP solving process itself.
+Unsolved instances are primarily attributable to limitations in constraint extraction and natural language parsing rather than deficiencies in the CSP solving mechanism itself. For puzzles where the constraints are correctly modeled, the solver typically converges quickly, often requiring only a small number of search decisions.
+
+Overall, the results demonstrate that a purely symbolic approach can remain competitive in terms of efficiency, even when operating at scale.
 
 ---
 
 ## 9. Conclusion
 
-This project demonstrates that classical symbolic reasoning techniques remain effective for structured logical reasoning tasks. By combining robust CSP modeling with established heuristics and propagation methods, the presented solver achieves high accuracy and efficiency on ZebraLogicBench. The modular design and trace infrastructure provide a solid foundation for future extensions, including hybrid symbolic–learning approaches.
+This project presented a purely symbolic CSP solver for Zebra logic puzzles within the AI Connect project context. By combining careful problem modeling with classical CSP techniques such as informed variable and value ordering, constraint propagation, and optimized backtracking, the solver achieves strong efficiency and reasonable accuracy on a large and diverse benchmark.
