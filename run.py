@@ -25,7 +25,7 @@ import time
 from typing import Dict, List, Optional, Any
 
 from data_loader import load_puzzles, CSPPuzzle
-from solver_optimized import OptimizedZebraPuzzleSolver as ZebraPuzzleSolver, SolverStats
+from solver import ZebraPuzzleSolver 
 from trace_generator import TraceGenerator
 
 
