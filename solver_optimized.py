@@ -1,7 +1,7 @@
 """
-Optimized CSP Solver with Advanced Techniques
+ CSP Solver with Advanced Techniques
 ==============================================
-A highly optimized CSP solver for Zebra/Logic Grid puzzles implementing:
+A CSP solver for Zebra/Logic Grid puzzles implementing:
 - MRV with Degree Heuristic tiebreaker
 - LCV (Least Constraining Value)
 - Forward Checking
@@ -70,19 +70,6 @@ class SolverStats:
 
 
 class OptimizedCSPSolver:
-    """
-    Highly Optimized CSP Solver implementing advanced techniques:
-    
-    1. MRV + Degree Heuristic - Variable selection
-    2. LCV with domain wipeout detection - Value ordering
-    3. Forward Checking - Immediate propagation
-    4. AC-3 with watched literals - Arc consistency
-    5. Conflict-Directed Backjumping - Smart backtracking
-    6. Nogood Learning - Remember failed combinations
-    7. Singleton Arc Consistency - Stronger propagation
-    8. Naked/Hidden Pairs - Constraint inference
-    9. Symmetry Breaking - Reduce search space
-    """
     
     def __init__(self, enable_tracing: bool = False):
         self.variables: Dict[str, CSPVariable] = {}
@@ -90,18 +77,18 @@ class OptimizedCSPSolver:
         self.binary_constraints: Dict[str, List[Tuple[str, CSPConstraint]]] = {}
         self.unary_constraints: Dict[str, List[CSPConstraint]] = {}
         
-        # Optimization settings (all enabled by default)
+        # settings (all enabled by default)
         self.use_mrv = True
-        self.use_degree_heuristic = True  # NEW: Tiebreaker for MRV
+        self.use_degree_heuristic = True  #Tiebreaker for MRV
         self.use_lcv = True
-        self.use_lcv_wipeout = True  # NEW: Count domain wipeouts instead of just conflicts
+        self.use_lcv_wipeout = True  #Count domain wipeouts instead of just conflicts
         self.use_forward_checking = True
         self.use_arc_consistency = True
-        self.use_backjumping = True  # NEW: Conflict-directed backjumping
-        self.use_nogood_learning = True  # NEW: Learn from failures
+        self.use_backjumping = True  #Conflict-directed backjumping
+        self.use_nogood_learning = True  #Learn from failures
         self.use_sac = False  # Singleton Arc Consistency (can be too aggressive)
-        self.use_naked_pairs = True  # NEW: Naked/Hidden pairs detection
-        self.use_watched_literals = True  # NEW: Watched literals optimization
+        self.use_naked_pairs = True  #Naked/Hidden pairs detection
+        self.use_watched_literals = True  #Watched literals
         
         # Nogood storage: set of frozensets of (var, value) tuples
         self.nogoods: Set[FrozenSet[Tuple[str, int]]] = set()
@@ -217,7 +204,7 @@ class OptimizedCSPSolver:
                     return False
         return True
     
-    # ==================== OPTIMIZATION 1: MRV + Degree Heuristic ====================
+    # ==================== MRV + Degree Heuristic ====================
     
     def _select_unassigned_variable(self, assignment: Dict[str, int], 
                                      domains: Dict[str, Set[int]]) -> Optional[str]:
@@ -257,7 +244,7 @@ class OptimizedCSPSolver:
         else:
             return unassigned[0]
     
-    # ==================== OPTIMIZATION 2: LCV with Domain Wipeout ====================
+    # ==================== LCV with Domain Wipeout ====================
     
     def _order_domain_values(self, var_name: str, assignment: Dict[str, int],
                              domains: Dict[str, Set[int]]) -> List[int]:
@@ -300,7 +287,7 @@ class OptimizedCSPSolver:
         
         return sorted(domain, key=count_impact)
     
-    # ==================== OPTIMIZATION 3: Consistency Checking ====================
+    # ==================== Consistency Checking ====================
     
     def _is_consistent(self, var_name: str, value: int, assignment: Dict[str, int]) -> bool:
         """Check if assignment is consistent."""
@@ -327,7 +314,7 @@ class OptimizedCSPSolver:
         
         return True
     
-    # ==================== OPTIMIZATION 4: Forward Checking ====================
+    # ==================== Forward Checking ====================
     
     def _forward_check(self, var_name: str, value: int, assignment: Dict[str, int], 
                        domains: Dict[str, Set[int]]) -> Optional[Dict[str, Set[int]]]:
@@ -360,12 +347,12 @@ class OptimizedCSPSolver:
         
         return new_domains
     
-    # ==================== OPTIMIZATION 5: AC-3 with Optimizations ====================
+    # ==================== AC-3 ====================
     
     def _ac3(self, domains: Dict[str, Set[int]], 
              changed_var: Optional[str] = None) -> bool:
         """
-        AC-3 with optimizations:
+        AC-3 
         - Set-based queue for O(1) membership
         - Only process relevant arcs when a variable changes
         """
@@ -443,7 +430,7 @@ class OptimizedCSPSolver:
         
         return revised
     
-    # ==================== OPTIMIZATION 6: Singleton Arc Consistency (SAC) ====================
+    # ==================== Singleton Arc Consistency (SAC) ====================
     
     def _singleton_arc_consistency(self, domains: Dict[str, Set[int]]) -> bool:
         """
@@ -481,7 +468,7 @@ class OptimizedCSPSolver:
         
         return True
     
-    # ==================== OPTIMIZATION 7: Naked/Hidden Pairs ====================
+    # ==================== Naked/Hidden Pairs ====================
     
     def _detect_naked_pairs(self, domains: Dict[str, Set[int]]) -> bool:
         """
@@ -565,7 +552,7 @@ class OptimizedCSPSolver:
         
         return True
     
-    # ==================== OPTIMIZATION 8: Nogood Learning ====================
+    # ====================  Nogood Learning ====================
     
     def _check_nogood(self, assignment: Dict[str, int]) -> bool:
         """Check if current assignment matches any learned nogood."""
@@ -600,7 +587,7 @@ class OptimizedCSPSolver:
                 self.nogoods.add(nogood)
                 self.nogoods_learned += 1
     
-    # ==================== OPTIMIZATION 9: Conflict-Directed Backjumping ====================
+    # ==================== Conflict-Directed Backjumping ====================
     
     def _backtrack_with_jumping(self, assignment: Dict[str, int], 
                                 domains: Dict[str, Set[int]],
@@ -697,10 +684,10 @@ class OptimizedCSPSolver:
         local_conflict_set.discard(var_name)  # Remove self from conflict set
         return None, local_conflict_set
     
-    # ==================== MAIN SOLVE METHOD ====================
+    # ==================== MAIN ====================
     
     def solve(self) -> SolverStats:
-        """Solve the CSP problem with all optimizations."""
+        """Solve the CSP problem."""
         start_time = time.time()
         
         # Reset statistics
@@ -775,7 +762,7 @@ class OptimizedCSPSolver:
                 propagations=self.propagations, traces=self.traces
             )
         
-        # Backtracking search with all optimizations
+        # Backtracking search
         if self.use_backjumping:
             solution, _ = self._backtrack_with_jumping({}, domains, [])
         else:
@@ -864,7 +851,7 @@ class OptimizedCSPSolver:
 
 class OptimizedZebraPuzzleSolver:
     """
-    High-level solver for Zebra puzzles using the optimized CSP solver.
+    High-level solver for Zebra puzzles using the CSP solver.
     """
     
     def __init__(self, enable_tracing: bool = False):
