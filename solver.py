@@ -44,7 +44,7 @@ def _bit_count(x: int) -> int:
 
 
 def _lsb_index(x: int) -> int:
-    # x must be non-zero
+    #x should always be non_zero
     return (x & -x).bit_length() - 1
 
 
@@ -55,7 +55,7 @@ def solve_min_steps(candidates: List[Candidate]) -> Tuple[Optional[Candidate], O
     n = len(candidates)
     full_mask = (1 << n) - 1
 
-    # var keys: (kind, house_index)
+    #var keys: kind, house_index
     kinds = ("Name", "Color", "Pet")
     size = candidates[0].size
 
@@ -90,13 +90,13 @@ def solve_min_steps(candidates: List[Candidate]) -> Tuple[Optional[Candidate], O
 
     @lru_cache(maxsize=None)
     def search(mask: int) -> Tuple[int, int]:
-        # returns (min_steps, candidate_index)
+        # returns will be min_steps and candidate_index
         if mask == 0:
             return 10**9, -1
         if mask & (mask - 1) == 0:
             return 0, _lsb_index(mask)
 
-        # pick variable with smallest domain > 1
+        #pick up the variable with the smallest domain that is less than 1
         best_var: Optional[Tuple[str, int]] = None
         best_dom: Optional[List[str]] = None
         best_size = 10**9
@@ -112,13 +112,13 @@ def solve_min_steps(candidates: List[Candidate]) -> Tuple[Optional[Candidate], O
                     break
 
         if best_var is None or best_dom is None:
-            # Multiple candidates but no multi-valued variable (should not happen)
+            #Multiple candidates but there isnt multi-valued variable- this thing should not happen
             return 10**9, -1
 
         kind, house = best_var
         best_steps = 10**9
         best_idx = -1
-        # Try values in sorted order for determinism
+        # Try values in the sorted order
         for value in best_dom:
             child_mask = mask & var_value_mask[(kind, house, value)]
             steps_child, idx_child = search(child_mask)
@@ -129,7 +129,7 @@ def solve_min_steps(candidates: List[Candidate]) -> Tuple[Optional[Candidate], O
                 best_steps = total
                 best_idx = idx_child
                 if best_steps == 1:
-                    # can't do better than 1 from a multi-solution state
+                    # cant do better than 1 from Multi_solution state
                     pass
 
         return best_steps, best_idx
@@ -178,8 +178,7 @@ def solve_puzzle_text(puzzle_text: str, size_raw: str) -> Dict[str, object]:
 
     all_candidates = generate_candidates(size=size, names=names, colors=colors, pets=pets)
 
-    # Forward checking / constraint propagation: apply each parsed constraint
-    # in clue order and count each application that reduces the candidate set.
+    # Forward checking and constraint propagation... 
     forward_check_steps = 0
     feasible = all_candidates
     for con in constraints:
